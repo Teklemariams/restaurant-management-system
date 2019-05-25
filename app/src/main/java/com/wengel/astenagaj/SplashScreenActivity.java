@@ -24,7 +24,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 .withBeforeLogoText("Astenagaj")
 //                .withAfterLogoText("Discover destinations to experience more of nature")
 //                .withAfterLogoText("Asgobgni")
-                .withLogo(R.drawable.logo_louncher_background);
+                .withLogo(R.drawable.splashscreen_image);
 
 //        splashScreen.getHeaderTextView().setTextColor(Color.BLACK);
 //        splashScreen.getFooterTextView().setTextColor(Color.BLACK);
