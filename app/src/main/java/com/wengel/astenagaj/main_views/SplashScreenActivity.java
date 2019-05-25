@@ -1,10 +1,12 @@
-package com.wengel.astenagaj;
+package com.wengel.astenagaj.main_views;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.wengel.astenagaj.R;
 
 import gr.net.maroulis.library.EasySplashScreen;
 

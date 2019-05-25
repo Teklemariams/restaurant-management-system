@@ -19,12 +19,8 @@
         <item name="android:activityOpenEnterAnimation">@android:anim/slide_in_left</item>
         <item name="android:activityOpenExitAnimation">@android:anim/slide_out_right</item>
     </style>
-    //theme with no action bar
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
+   y
 
     <style name="titleText">
         <item name="android:textSize">22dp</item>
