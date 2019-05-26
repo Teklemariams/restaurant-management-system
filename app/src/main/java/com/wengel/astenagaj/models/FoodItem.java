@@ -1,8 +1,8 @@
 package com.wengel.astenagaj.models;
 
 public class FoodItem {
-    String name;
-    double price;
+    private String name;
+    private double price;
 
     public FoodItem(String name, double price) {
         this.name = name;

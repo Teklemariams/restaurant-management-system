@@ -1,15 +1,16 @@
 package com.wengel.astenagaj.models;
 
 import java.util.Date;
-public class Employee {
-    String name;
-    int age;
-    double employeeId;
-    Date hireDate;
-    double efficiency;
-    String jobTitle;
 
-    public Employee(String name, int age, double employeeId, Date hireDate, double efficiency,  String jobTitle) {
+public class Employee {
+    private String name;
+    private int age;
+    private double employeeId;
+    private Date hireDate;
+    private double efficiency;
+    private String jobTitle;
+
+    public Employee(String name, int age, double employeeId, Date hireDate, double efficiency, String jobTitle) {
         this.name = name;
         this.age = age;
         this.employeeId = employeeId;

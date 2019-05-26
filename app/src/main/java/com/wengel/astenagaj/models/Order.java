@@ -1,11 +1,11 @@
 package com.wengel.astenagaj.models;
 
 class Order {
-    FoodItem foodItem;
-    int tableNo;
-    String waiterHandling;
-    String status;
-    boolean isPaid;
+    private FoodItem foodItem;
+    private int tableNo;
+    private String waiterHandling;
+    private String status;
+    private boolean isPaid;
 
     public Order(FoodItem foodItem, int tableNo, String waiterHandling, String status, boolean isPaid) {
         this.foodItem = foodItem;
