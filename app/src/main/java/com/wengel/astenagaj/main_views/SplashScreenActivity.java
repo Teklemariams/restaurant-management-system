@@ -18,8 +18,8 @@ public class SplashScreenActivity extends AppCompatActivity {
         //splash screen
         EasySplashScreen splashScreen = new EasySplashScreen(SplashScreenActivity.this)
                 .withFullScreen()
-                .withTargetActivity(MainActivity.class)
-                .withSplashTimeOut(5000)
+                .withTargetActivity(WelcomeActivity.class)
+                .withSplashTimeOut(0000)
                 .withBackgroundColor(Color.WHITE)
 //                .withHeaderText("Header")
 //                .withFooterText("footer")
@@ -40,7 +40,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         easySplashScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
+                startActivity(new Intent(SplashScreenActivity.this, WelcomeActivity.class));
             }
         });
 

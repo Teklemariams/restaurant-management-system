@@ -1,5 +1,7 @@
 <resources>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_welcome">Welcome Activity</string>
+    <string name="title_activity_manager">Manager Activity</string>
+    <string name="title_activity_customer">Customer Activity</string>
     <string name="title_menus">Menus</string>
     <string name="title_orders">Order management</string>
     <string name="title_employees">Employee management</string>

@@ -12,7 +12,7 @@ import android.view.MenuItem;
 
 import com.wengel.astenagaj.R;
 
-public class MainActivity extends AppCompatActivity {
+public class ManagerActivity extends AppCompatActivity {
     private DrawerLayout drawer;
 
 
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
                     // to be implemented later
 //                    case R.id.aboout_us:
-//                        startActivity(new Intent(MainActivity.this, AboutActivity.class));
+//                        startActivity(new Intent(ManagerActivity.this, AboutActivity.class));
 
                 }
                 drawer.closeDrawer(GravityCompat.START);
