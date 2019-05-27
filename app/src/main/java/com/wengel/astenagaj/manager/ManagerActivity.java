@@ -13,29 +13,21 @@ import android.view.MenuItem;
 import com.wengel.astenagaj.R;
 
 public class ManagerActivity extends AppCompatActivity {
-    private DrawerLayout drawer;
-
+    private DrawerLayout mgrDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_manager);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.mgrToolbar);
         setSupportActionBar(toolbar);
-        drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        mgrDrawer = findViewById(R.id.manager_drawer_layout);
+        NavigationView navigationView = findViewById(R.id.mgrNav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
-                    case R.id.navigation_foodmenu:
-                        getSupportActionBar().setTitle("Menus");
-                        getSupportFragmentManager()
-                                .beginTransaction()
-                                .replace(R.id.fragment_container,
-                                        new MenusFragment()).commit();
-                        break;
                     case R.id.navigation_orders:
                         getSupportActionBar().setTitle("Orders");
                         getSupportFragmentManager()
@@ -57,26 +49,33 @@ public class ManagerActivity extends AppCompatActivity {
                                 .replace(R.id.fragment_container,
                                         new SalesFragment());
                         break;
+                    case R.id.navigation_foodMgt:
+                        getSupportActionBar().setTitle("Menu management");
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.fragment_container,
+                                        new MenusFragment()).commit();
+                        break;
 
                     // to be implemented later
 //                    case R.id.aboout_us:
 //                        startActivity(new Intent(ManagerActivity.this, AboutActivity.class));
 
                 }
-                drawer.closeDrawer(GravityCompat.START);
+                mgrDrawer.closeDrawer(GravityCompat.START);
                 return true;
             }
         });
 
         ActionBarDrawerToggle toggle =
-                new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
+                new ActionBarDrawerToggle(this, mgrDrawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        mgrDrawer.addDrawerListener(toggle);
         toggle.syncState();
 //        getSupportFragmentManager()
 //                .beginTransaction()
 //                .replace(R.id.fragment_container,
 //                        new HomeFragment()).commit();
-        navigationView.setCheckedItem(R.id.navigation_foodmenu);
+        navigationView.setCheckedItem(R.id.navigation_foodMgt);
 
     }
 }

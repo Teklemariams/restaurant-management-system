@@ -9,24 +9,19 @@
             android:id="@+id/navigation_foodmenu"
             style="@style/contentText"
             android:icon="@drawable/ic_food_menu"
-            android:title="@string/title_menus" />
+            android:title="@string/title_customerMenus" />
 
         <item
-            android:id="@+id/navigation_orders"
+            android:id="@+id/navigation_myOrders"
             style="@style/contentText"
             android:icon="@drawable/ic_ordermgt"
-            android:title="@string/title_orders" />
+            android:title="@string/title_customerOrders" />
 
         <item
-            android:id="@+id/navigation_employees"
+            android:id="@+id/navigation_comment"
             style="@style/contentText"
-            android:icon="@drawable/ic_employeemgt"
-            android:title="@string/title_employees" />
-        <item
-            android:id="@+id/navigation_sales"
-            style="@style/contentText"
-            android:icon="@drawable/ic_salesreport"
-            android:title="@string/title_sales" />
+            android:icon="@drawable/ic_comment"
+            android:title="@string/title_customerComment" />
         <item
             android:id="@+id/aboout_us"
             style="@style/contentText"

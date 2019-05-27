@@ -2,9 +2,14 @@
     <string name="title_activity_welcome">Welcome Activity</string>
     <string name="title_activity_manager">Manager Activity</string>
     <string name="title_activity_customer">Customer Activity</string>
-    <string name="title_menus">Menus</string>
-    <string name="title_orders">Order management</string>
+    <string name="title_menusMgt">Menus management</string>
+    <string name="title_ordersMgt">Order management</string>
     <string name="title_employees">Employee management</string>
+    <string name="title_customerMenus">Menus </string>
+    <string name="title_customerOrders">My orders</string>
+    <string name="title_customerComment">Comment</string>
+
+
 
     <string name="title_sales">Sales report</string>
     <string name="title_aboutus">About us</string>

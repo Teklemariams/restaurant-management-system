@@ -23,9 +23,11 @@
             android:label="@string/title_activity_welcome" />
         <activity
             android:name=".manager.ManagerActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".main_views.CustomerActivity"
-            android:label="@string/title_activity_customer"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main_views.CustomerActivity"
+            android:label="@string/title_activity_customer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
