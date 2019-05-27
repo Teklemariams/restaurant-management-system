@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.wengel.astenagaj.R;
-import com.wengel.astenagaj.manager.ManagerActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
     private Button continueCustomerBtn;

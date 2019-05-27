@@ -1,4 +1,4 @@
-package com.wengel.astenagaj.manager;
+package com.wengel.astenagaj.main_views;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,6 +11,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.wengel.astenagaj.R;
+import com.wengel.astenagaj.manager.EmployeesFragment;
+import com.wengel.astenagaj.manager.MenusMgtFragment;
+import com.wengel.astenagaj.manager.OrdersMgtFragment;
+import com.wengel.astenagaj.manager.SalesFragment;
 
 public class ManagerActivity extends AppCompatActivity {
     private DrawerLayout mgrDrawer;
@@ -33,7 +37,7 @@ public class ManagerActivity extends AppCompatActivity {
                         getSupportFragmentManager()
                                 .beginTransaction()
                                 .replace(R.id.fragment_container,
-                                        new OrdersFragment()).commit();
+                                        new OrdersMgtFragment()).commit();
                         break;
                     case R.id.navigation_employees:
                         getSupportActionBar().setTitle("Employees");
@@ -54,7 +58,7 @@ public class ManagerActivity extends AppCompatActivity {
                         getSupportFragmentManager()
                                 .beginTransaction()
                                 .replace(R.id.fragment_container,
-                                        new MenusFragment()).commit();
+                                        new MenusMgtFragment()).commit();
                         break;
 
                     // to be implemented later
@@ -71,10 +75,10 @@ public class ManagerActivity extends AppCompatActivity {
                 new ActionBarDrawerToggle(this, mgrDrawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         mgrDrawer.addDrawerListener(toggle);
         toggle.syncState();
-//        getSupportFragmentManager()
-//                .beginTransaction()
-//                .replace(R.id.fragment_container,
-//                        new HomeFragment()).commit();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_container,
+                        new OrdersMgtFragment()).commit();
         navigationView.setCheckedItem(R.id.navigation_foodMgt);
 
     }

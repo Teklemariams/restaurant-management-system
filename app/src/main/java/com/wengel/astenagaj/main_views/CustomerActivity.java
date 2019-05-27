@@ -1,20 +1,19 @@
 package com.wengel.astenagaj.main_views;
 
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.wengel.astenagaj.R;
-import com.wengel.astenagaj.manager.EmployeesFragment;
-import com.wengel.astenagaj.manager.MenusFragment;
-import com.wengel.astenagaj.manager.OrdersFragment;
-import com.wengel.astenagaj.manager.SalesFragment;
+import com.wengel.astenagaj.customer.CommentFragment;
+import com.wengel.astenagaj.customer.MenusFragment;
+import com.wengel.astenagaj.customer.OrdersFragment;
 
 public class CustomerActivity extends AppCompatActivity {
     private DrawerLayout customerDrawer;
@@ -34,25 +33,25 @@ public class CustomerActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.navigation_foodmenu:
-//                        getSupportActionBar().setTitle("Menus");
-//                        getSupportFragmentManager()
-//                                .beginTransaction()
-//                                .replace(R.id.fragment_container,
-//                                        new MenusFragment()).commit();
+                        getSupportActionBar().setTitle("Menus");
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.fragment_container,
+                                        new CommentFragment()).commit();
                         break;
                     case R.id.navigation_myOrders:
-//                        getSupportActionBar().setTitle("My orders");
-//                        getSupportFragmentManager()
-//                                .beginTransaction()
-//                                .replace(R.id.fragment_container,
-//                                        new OrdersFragment()).commit();
+                        getSupportActionBar().setTitle("My orders");
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.fragment_container,
+                                        new OrdersFragment()).commit();
                         break;
                     case R.id.navigation_comment:
-//                        getSupportActionBar().setTitle("My comment");
-//                        getSupportFragmentManager()
-//                                .beginTransaction()
-//                                .replace(R.id.fragment_container,
-//                                        new EmployeesFragment()).commit();
+                        getSupportActionBar().setTitle("My comment");
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.fragment_container,
+                                        new CommentFragment()).commit();
                         break;
 
                     // to be implemented later
@@ -69,10 +68,10 @@ public class CustomerActivity extends AppCompatActivity {
                 new ActionBarDrawerToggle(this, customerDrawer, customerToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         customerDrawer.addDrawerListener(toggle);
         toggle.syncState();
-//        getSupportFragmentManager()
-//                .beginTransaction()
-//                .replace(R.id.fragment_container,
-//                        new HomeFragment()).commit();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_container,
+                        new MenusFragment()).commit();
         customerNavigationView.setCheckedItem(R.id.navigation_foodmenu);
 
     }

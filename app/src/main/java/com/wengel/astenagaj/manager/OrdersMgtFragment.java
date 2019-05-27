@@ -10,13 +10,13 @@ import android.view.ViewGroup;
 
 import com.wengel.astenagaj.R;
 
-public class OrdersFragment extends Fragment {
-    public OrdersFragment() {
+public class OrdersMgtFragment extends Fragment {
+    public OrdersMgtFragment() {
 
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_orders, container, false);
+        return inflater.inflate(R.layout.fragment_orders_mgt, container, false);
     }
 }
