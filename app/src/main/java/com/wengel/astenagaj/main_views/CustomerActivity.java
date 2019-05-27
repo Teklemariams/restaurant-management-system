@@ -1,4 +1,4 @@
-package com.wengel.astenagaj.main_views.customer;
+package com.wengel.astenagaj.main_views;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

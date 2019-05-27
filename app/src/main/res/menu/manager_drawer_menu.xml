@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/navigation_foodmenu"
+            style="@style/contentText"
+            android:icon="@drawable/ic_food_menu"
+            android:title="@string/title_menus" />
+
+        <item
+            android:id="@+id/navigation_orders"
+            style="@style/contentText"
+            android:icon="@drawable/ic_ordermgt"
+            android:title="@string/title_orders" />
+
+        <item
+            android:id="@+id/navigation_employees"
+            style="@style/contentText"
+            android:icon="@drawable/ic_employeemgt"
+            android:title="@string/title_employees" />
+        <item
+            android:id="@+id/navigation_sales"
+            style="@style/contentText"
+            android:icon="@drawable/ic_salesreport"
+            android:title="@string/title_sales" />
+        <item
+            android:id="@+id/aboout_us"
+            style="@style/contentText"
+            android:icon="@drawable/ic_aboutus"
+            android:title="About us" />
+    </group>
+    <!--<item android:title="About">-->
+    <!--<menu>-->
+
+    <!--<item-->
+    <!--android:id="@+id/share"-->
+    <!--style="@style/contentText"-->
+    <!--android:icon="@drawable/ic_share"-->
+    <!--android:title="Share" />-->
+    <!--<item-->
+    <!--android:id="@+id/rate_us"-->
+    <!--style="@style/contentText"-->
+    <!--android:icon="@drawable/ic_star_black_24dp"-->
+    <!--android:title="Rate us" />-->
+    <!--</menu>-->
+
+    <!--</item>-->
+
+</menu>
