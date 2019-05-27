@@ -1,4 +1,4 @@
-package com.wengel.astenagaj.main_views;
+package com.wengel.astenagaj.main_views.manager;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,6 +11,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.wengel.astenagaj.R;
+import com.wengel.astenagaj.main_views.manager.EmployeesFragment;
+import com.wengel.astenagaj.main_views.manager.MenusFragment;
+import com.wengel.astenagaj.main_views.manager.OrdersFragment;
+import com.wengel.astenagaj.main_views.manager.SalesFragment;
 
 public class ManagerActivity extends AppCompatActivity {
     private DrawerLayout drawer;

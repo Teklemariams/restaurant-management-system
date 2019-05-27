@@ -1,4 +1,4 @@
-package com.wengel.astenagaj.main_views;
+package com.wengel.astenagaj.main_views.manager;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
