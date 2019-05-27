@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wengel.astenagaj">
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -27,7 +32,19 @@
         <activity
             android:name=".main_views.CustomerActivity"
             android:label="@string/title_activity_customer"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".customer.AddOrderActivity" />
+        <activity android:name=".customer.MyOrdersActivity" />
+        <activity android:name=".customer.BillActivity" />
+        <activity
+            android:name=".manager.ManagerLoginActivity"
+            android:label="@string/title_activity_manager_login" />
+        <activity android:name=".manager.OrderDetailActivity" />
+        <activity android:name=".manager.PaymentStatusActivity" />
+        <activity android:name=".manager.EmployeeDetailActivity" />
+        <activity android:name=".manager.EmployeeEvaluationActivity" />
+        <activity android:name=".manager.AddNewEmployeeActivity" />
+        <activity android:name=".manager.SalesReportActivity"></activity>
     </application>
 
 </manifest>
