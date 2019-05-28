@@ -37,7 +37,7 @@ public class CustomerActivity extends AppCompatActivity {
                         getSupportFragmentManager()
                                 .beginTransaction()
                                 .replace(R.id.fragment_container,
-                                        new CommentFragment()).commit();
+                                        new MenusFragment()).commit();
                         break;
                     case R.id.navigation_myOrders:
                         getSupportActionBar().setTitle("My orders");

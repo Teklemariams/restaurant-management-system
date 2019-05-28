@@ -33,7 +33,8 @@
             android:name=".main_views.CustomerActivity"
             android:label="@string/title_activity_customer"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".customer.AddOrderActivity" />
+        <activity android:name=".customer.AddOrderActivity"
+            android:label="@string/title_addneworder_acctivity"/>
         <activity android:name=".customer.MyOrdersActivity" />
         <activity android:name=".customer.BillActivity" />
         <activity

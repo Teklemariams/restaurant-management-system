@@ -1,26 +1,26 @@
 package com.wengel.astenagaj.models;
 
 class Order {
-    private FoodItem foodItem;
+    private MenuItem menuItem;
     private int tableNo;
     private String waiterHandling;
     private String status;
     private boolean isPaid;
 
-    public Order(FoodItem foodItem, int tableNo, String waiterHandling, String status, boolean isPaid) {
-        this.foodItem = foodItem;
+    public Order(MenuItem menuItem, int tableNo, String waiterHandling, String status, boolean isPaid) {
+        this.menuItem = menuItem;
         this.tableNo = tableNo;
         this.waiterHandling = waiterHandling;
         this.status = status;
         this.isPaid = isPaid;
     }
 
-    public FoodItem getFoodItem() {
-        return foodItem;
+    public MenuItem getMenuItem() {
+        return menuItem;
     }
 
-    public void setFoodItem(FoodItem foodItem) {
-        this.foodItem = foodItem;
+    public void setMenuItem(MenuItem menuItem) {
+        this.menuItem = menuItem;
     }
 
     public int getTableNo() {
