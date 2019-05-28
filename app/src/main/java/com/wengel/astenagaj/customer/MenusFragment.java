@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.pnikosis.materialishprogress.ProgressWheel;
 import com.wengel.astenagaj.R;
 import com.wengel.astenagaj.customer.menus.MenuItemAdapter;
+import com.wengel.astenagaj.customer.menus.TableAndQuantityActivity;
 import com.wengel.astenagaj.models.MenuItem;
 import com.wengel.astenagaj.util.App;
 import com.wengel.astenagaj.util.Constants;
@@ -25,7 +26,7 @@ import java.util.ArrayList;
 public class MenusFragment extends Fragment {
     ArrayList<MenuItem> menus;
     ListView menusListView;
-    Bundle bundle = new Bundle();
+    private Bundle bundle = new Bundle();
     private ProgressWheel progressWheel;
     private TextView statusInfoLabel;
 
@@ -62,7 +63,7 @@ public class MenusFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 final MenuItem menu = menus.get(position);
-                Intent intent = new Intent(view.getContext(), AddOrderActivity.class);
+                Intent intent = new Intent(view.getContext(), TableAndQuantityActivity.class);
                 App app = (App) getActivity().getApplication();
                 app.getMenuItemController().addMenuItem(menu);
 //                bundle.putString(Constants.KEY_MENUITEM_NAME_SPACE, menu.getName());

@@ -1,18 +1,20 @@
 package com.wengel.astenagaj.customer;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Spinner;
 import com.wengel.astenagaj.R;
 import com.wengel.astenagaj.customer.menus.AddedMenusAdapter;
 import com.wengel.astenagaj.main_views.CustomerActivity;
 import com.wengel.astenagaj.models.MenuItem;
+import com.wengel.astenagaj.models.Order;
 import com.wengel.astenagaj.util.App;
+import com.wengel.astenagaj.util.Constants;
+
 import java.util.ArrayList;
 
 public class AddOrderActivity extends AppCompatActivity {
@@ -20,7 +22,13 @@ public class AddOrderActivity extends AppCompatActivity {
     private Button addOrderButton;
     private Button cancelOrderButton;
     private Button orderButton;
-    ArrayList<MenuItem> addedMenus;
+    private ArrayList<MenuItem> addedMenus;
+    private ArrayList<Order> orders;
+    private Spinner tableNoSpinner;
+
+    Intent quantiyAndTableNoIntent;
+    Bundle quantiyAndTableNoBundle;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +39,16 @@ public class AddOrderActivity extends AppCompatActivity {
         addOrderButton = findViewById(R.id.addorder_add_bn);
         cancelOrderButton = findViewById(R.id.addorder_cancel_bn);
         orderButton = findViewById(R.id.addorder_order_bn);
+        tableNoSpinner = findViewById(R.id.customerTableNoSpinner);
+
+        quantiyAndTableNoIntent = getIntent();
+        quantiyAndTableNoBundle= quantiyAndTableNoIntent.getExtras();
+
         //data
         addedMenus = new ArrayList<>();
+        orders = new ArrayList<>();
+//        int tableNo = quantiyAndTableNoBundle.getInt(Constants.KEY_ORDER_TABLE_NO);
+//        int mealQuantity = quantiyAndTableNoBundle.getInt(Constants.KEY_ORDER_QUANTITY);
         //adapter
         AddedMenusAdapter<MenuItem> adpater = new AddedMenusAdapter<>(this, addedMenus);
         addedOrderslistView.setAdapter(adpater);
@@ -40,13 +56,13 @@ public class AddOrderActivity extends AppCompatActivity {
         addOrderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO
+                startActivity(new Intent(AddOrderActivity.this, CustomerActivity.class));
             }
         });
         orderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO
+                //TODO - to best sent to api
             }
         });
 
@@ -54,7 +70,9 @@ public class AddOrderActivity extends AppCompatActivity {
         cancelOrderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                App app = (App) getApplication();
+                app.getMenuItemController().getMenus().clear();
+                startActivity(new Intent(AddOrderActivity.this, CustomerActivity.class));
 
             }
         });
@@ -68,9 +86,13 @@ public class AddOrderActivity extends AppCompatActivity {
         addOrderButton = findViewById(R.id.addorder_add_bn);
         cancelOrderButton = findViewById(R.id.addorder_cancel_bn);
         orderButton = findViewById(R.id.addorder_order_bn);
+        quantiyAndTableNoIntent = getIntent();
+        quantiyAndTableNoBundle= quantiyAndTableNoIntent.getExtras();
+
         //data
         addedMenus = new ArrayList<>();
-        App app = (App) getApplication();
+        orders = new ArrayList<>();
+        final App app = (App) getApplication();
         addedMenus = app.getMenuItemController().getMenus();
         //adapter
         AddedMenusAdapter<MenuItem> adpater = new AddedMenusAdapter<>(this, addedMenus);
@@ -85,16 +107,17 @@ public class AddOrderActivity extends AppCompatActivity {
         orderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO
+                //TODO -- to best sent to api
             }
         });
         cancelOrderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                app.getMenuItemController().getMenus().clear();
                 startActivity(new Intent(AddOrderActivity.this, CustomerActivity.class));
+
             }
         });
-
 
 
     }

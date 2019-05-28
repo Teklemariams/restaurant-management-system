@@ -34,8 +34,9 @@
             android:name=".main_views.CustomerActivity"
             android:label="@string/title_activity_customer"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".customer.AddOrderActivity"
-            android:label="@string/title_addneworder_acctivity"/>
+        <activity
+            android:name=".customer.AddOrderActivity"
+            android:label="@string/title_addneworder_acctivity" />
         <activity android:name=".customer.MyOrdersActivity" />
         <activity android:name=".customer.BillActivity" />
         <activity
@@ -46,7 +47,9 @@
         <activity android:name=".manager.EmployeeDetailActivity" />
         <activity android:name=".manager.EmployeeEvaluationActivity" />
         <activity android:name=".manager.AddNewEmployeeActivity" />
-        <activity android:name=".manager.SalesReportActivity"></activity>
+        <activity android:name=".manager.SalesReportActivity" />
+        <activity android:name=".customer.menus.TableAndQuantityActivity"
+            android:label="@string/title_activity_table_and_quantity"></activity>
     </application>
 
 </manifest>

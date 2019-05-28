@@ -6,6 +6,7 @@
     android:orientation="vertical"
     tools:context=".customer.AddOrderActivity">
 
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,12 +30,24 @@
             style="@style/titleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
             android:background="@color/colorPrimaryDark"
-            android:text="Cancel"
+            android:text="Clear"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimary" />
+        <Button
+            android:id="@+id/addorder_order_bn"
+            style="@style/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Order"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary" />
+
 
 
     </LinearLayout>
@@ -45,17 +58,5 @@
         android:layout_height="wrap_content">
 
     </ListView>
-
-    <Button
-        android:id="@+id/addorder_order_bn"
-        style="@style/titleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Order"
-        android:textAllCaps="false"
-        android:textColor="@color/colorPrimary" />
 
 </LinearLayout>

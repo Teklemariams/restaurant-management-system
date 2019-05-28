@@ -1,14 +1,16 @@
 package com.wengel.astenagaj.models;
 
-class Order {
+public class Order {
     private MenuItem menuItem;
+    private int quantity;
     private int tableNo;
     private String waiterHandling;
     private String status;
     private boolean isPaid;
 
-    public Order(MenuItem menuItem, int tableNo, String waiterHandling, String status, boolean isPaid) {
+    public Order(MenuItem menuItem, int quantity, int tableNo, String waiterHandling, String status, boolean isPaid) {
         this.menuItem = menuItem;
+        this.quantity = quantity;
         this.tableNo = tableNo;
         this.waiterHandling = waiterHandling;
         this.status = status;
@@ -53,6 +55,14 @@ class Order {
 
     public void setPaid(boolean paid) {
         isPaid = paid;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     @Override
