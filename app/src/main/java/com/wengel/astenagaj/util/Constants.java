@@ -13,5 +13,8 @@ public class Constants {
     public static final String KEY_ORDER_HANDLER_WAITER= "Order handlerWaiter";
     public static final String KEY_ORDER_STATUS= "Order status";
 
+    //Fragments to load
+    public static final String KEY_CUSTOMER_FRG_TO_LOAD = "Customer frag to load";
+
 
 }

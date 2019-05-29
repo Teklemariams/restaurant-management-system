@@ -1,5 +1,6 @@
 package com.wengel.astenagaj.main_views;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -14,15 +15,19 @@ import com.wengel.astenagaj.R;
 import com.wengel.astenagaj.customer.CommentFragment;
 import com.wengel.astenagaj.customer.MenusFragment;
 import com.wengel.astenagaj.customer.OrdersFragment;
+import com.wengel.astenagaj.util.Constants;
 
 public class CustomerActivity extends AppCompatActivity {
     private DrawerLayout customerDrawer;
+    private Intent intent;
+    private Bundle bundle;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer);
+
 
         Toolbar customerToolbar = findViewById(R.id.customerToolbar);
         setSupportActionBar(customerToolbar);
@@ -73,6 +78,47 @@ public class CustomerActivity extends AppCompatActivity {
                 .replace(R.id.fragment_container,
                         new MenusFragment()).commit();
         customerNavigationView.setCheckedItem(R.id.navigation_foodmenu);
+
+//        intent = getIntent();
+//        bundle = intent.getExtras();
+//
+//        String fragToBeLoaded = bundle.getString(Constants.KEY_CUSTOMER_FRG_TO_LOAD);
+//        if (fragToBeLoaded != null) {
+//
+//            switch (fragToBeLoaded){
+//                case "Menus frag":
+//                    getSupportActionBar().setTitle("Menus");
+//                    getSupportFragmentManager()
+//                            .beginTransaction()
+//                            .replace(R.id.fragment_container,
+//                                    new MenusFragment()).commit();
+//
+//                    break;
+//                case "Orders frag":
+//                    getSupportActionBar().setTitle("My orders");
+//                    getSupportFragmentManager()
+//                            .beginTransaction()
+//                            .replace(R.id.fragment_container,
+//                                    new OrdersFragment()).commit();
+//                    break;
+//                case "Comment frag":
+//                    getSupportActionBar().setTitle("My comment");
+//                    getSupportFragmentManager()
+//                            .beginTransaction()
+//                            .replace(R.id.fragment_container,
+//                                    new CommentFragment()).commit();
+//                    break;
+//                default:
+//                    getSupportActionBar().setTitle("Menus");
+//                    getSupportFragmentManager()
+//                            .beginTransaction()
+//                            .replace(R.id.fragment_container,
+//                                    new MenusFragment()).commit();
+//                    break;
+//
+//            }
+//        }
+
 
     }
 

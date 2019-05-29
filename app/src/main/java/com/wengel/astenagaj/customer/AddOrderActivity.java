@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
+
 import com.wengel.astenagaj.R;
 import com.wengel.astenagaj.customer.menus.AddedMenusAdapter;
 import com.wengel.astenagaj.main_views.CustomerActivity;
@@ -42,7 +44,7 @@ public class AddOrderActivity extends AppCompatActivity {
         tableNoSpinner = findViewById(R.id.customerTableNoSpinner);
 
         quantiyAndTableNoIntent = getIntent();
-        quantiyAndTableNoBundle= quantiyAndTableNoIntent.getExtras();
+        quantiyAndTableNoBundle = quantiyAndTableNoIntent.getExtras();
 
         //data
         addedMenus = new ArrayList<>();
@@ -63,9 +65,16 @@ public class AddOrderActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //TODO - to best sent to api
+//                Intent i = new Intent(AddOrderActivity.this, CustomerActivity.class);
+//                Bundle b = new Bundle();
+//                b.putString(Constants.KEY_CUSTOMER_FRG_TO_LOAD, "Menus frag");
+//                i.putExtras(b);
+                startActivity(new Intent(AddOrderActivity.this, CustomerActivity.class));
+                Toast.makeText(AddOrderActivity.this, "Your Order is submitted", Toast.LENGTH_LONG).show();
+
+
             }
         });
-
 
         cancelOrderButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,7 +85,6 @@ public class AddOrderActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
     @Override
@@ -87,7 +95,7 @@ public class AddOrderActivity extends AppCompatActivity {
         cancelOrderButton = findViewById(R.id.addorder_cancel_bn);
         orderButton = findViewById(R.id.addorder_order_bn);
         quantiyAndTableNoIntent = getIntent();
-        quantiyAndTableNoBundle= quantiyAndTableNoIntent.getExtras();
+        quantiyAndTableNoBundle = quantiyAndTableNoIntent.getExtras();
 
         //data
         addedMenus = new ArrayList<>();
@@ -108,6 +116,9 @@ public class AddOrderActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //TODO -- to best sent to api
+                Toast.makeText(AddOrderActivity.this, "Your Order is submitted", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(AddOrderActivity.this, CustomerActivity.class));
+
             }
         });
         cancelOrderButton.setOnClickListener(new View.OnClickListener() {

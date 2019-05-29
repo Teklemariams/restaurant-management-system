@@ -26,9 +26,9 @@ import java.util.ArrayList;
 public class MenusFragment extends Fragment {
     ArrayList<MenuItem> menus;
     ListView menusListView;
-    private Bundle bundle = new Bundle();
     private ProgressWheel progressWheel;
     private TextView statusInfoLabel;
+//    private Bundle bundle = new Bundle();
 
     public MenusFragment() {
 
