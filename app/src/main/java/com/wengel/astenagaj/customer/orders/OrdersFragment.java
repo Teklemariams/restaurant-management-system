@@ -53,6 +53,13 @@ public class OrdersFragment extends Fragment {
                 startActivity(new Intent(getActivity(), AddOrderActivity.class));
             }
         });
+        requestBillButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), BillActivity.class));
+            }
+        });
+
         //data
         myOrders = new ArrayList<>();
         myOrders = app.getOrderController().getOrders();

@@ -29,6 +29,7 @@
     </string>
     <string name="title_addneworder_acctivity">Adding order</string>
     <string name="title_activity_table_and_quantity">Entering table and quantityOrdered</string>
+    <string name="title_activity_bill">Your bill</string>
     <string-array name="table_nos_dropdown_list">
         <item>01</item>
         <item>02</item>

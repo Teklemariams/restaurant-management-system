@@ -37,7 +37,8 @@
         <activity
             android:name=".customer.menus.AddOrderActivity"
             android:label="@string/title_addneworder_acctivity" />
-        <activity android:name=".customer.orders.BillActivity" />
+        <activity android:name=".customer.orders.BillActivity"
+            android:label="@string/title_activity_bill"/>
         <activity
             android:name=".manager.ManagerLoginActivity"
             android:label="@string/title_activity_manager_login" />
