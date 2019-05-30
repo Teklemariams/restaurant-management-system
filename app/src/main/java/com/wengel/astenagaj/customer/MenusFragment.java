@@ -80,9 +80,9 @@ public class MenusFragment extends Fragment {
         menus.add(new MenuItem("Beyaynet", 30.00));
         menus.add(new MenuItem("Tibs", 30.00));
         menus.add(new MenuItem("Firfir", 30.00));
-        menus.add(new MenuItem("Firfir", 30.00));
-        menus.add(new MenuItem("Firfir", 30.00));
-        menus.add(new MenuItem("Firfir", 30.00));
+        menus.add(new MenuItem("Kikil", 30.00));
+        menus.add(new MenuItem("TIbs wot", 30.00));
+        menus.add(new MenuItem("Atikilt", 30.00));
         menus.add(new MenuItem("Firfir", 30.00));
         menus.add(new MenuItem("Firfir", 30.00));
         menus.add(new MenuItem("Firfir", 30.00));

@@ -10,12 +10,11 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.wengel.astenagaj.R;
-import com.wengel.astenagaj.customer.menus.AddedMenusAdapter;
+import com.wengel.astenagaj.customer.menus.AddedOrdersAdapter;
 import com.wengel.astenagaj.main_views.CustomerActivity;
 import com.wengel.astenagaj.models.MenuItem;
 import com.wengel.astenagaj.models.Order;
 import com.wengel.astenagaj.util.App;
-import com.wengel.astenagaj.util.Constants;
 
 import java.util.ArrayList;
 
@@ -24,7 +23,7 @@ public class AddOrderActivity extends AppCompatActivity {
     private Button addOrderButton;
     private Button cancelOrderButton;
     private Button orderButton;
-    private ArrayList<MenuItem> addedMenus;
+    private ArrayList<Order> addedOrders;
     private ArrayList<Order> orders;
     private Spinner tableNoSpinner;
 
@@ -47,12 +46,12 @@ public class AddOrderActivity extends AppCompatActivity {
         quantiyAndTableNoBundle = quantiyAndTableNoIntent.getExtras();
 
         //data
-        addedMenus = new ArrayList<>();
-        orders = new ArrayList<>();
+        addedOrders = new ArrayList<>();
+//        orders = new ArrayList<>();
 //        int tableNo = quantiyAndTableNoBundle.getInt(Constants.KEY_ORDER_TABLE_NO);
 //        int mealQuantity = quantiyAndTableNoBundle.getInt(Constants.KEY_ORDER_QUANTITY);
         //adapter
-        AddedMenusAdapter<MenuItem> adpater = new AddedMenusAdapter<>(this, addedMenus);
+        AddedOrdersAdapter<Order> adpater = new AddedOrdersAdapter<>(this, addedOrders);
         addedOrderslistView.setAdapter(adpater);
 
         addOrderButton.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +79,7 @@ public class AddOrderActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 App app = (App) getApplication();
-                app.getMenuItemController().getMenus().clear();
+                app.getOrderController().getOrders().clear();
                 startActivity(new Intent(AddOrderActivity.this, CustomerActivity.class));
 
             }
@@ -98,12 +97,12 @@ public class AddOrderActivity extends AppCompatActivity {
         quantiyAndTableNoBundle = quantiyAndTableNoIntent.getExtras();
 
         //data
-        addedMenus = new ArrayList<>();
-        orders = new ArrayList<>();
+        addedOrders = new ArrayList<>();
+//        orders = new ArrayList<>();
         final App app = (App) getApplication();
-        addedMenus = app.getMenuItemController().getMenus();
+        addedOrders = app.getOrderController().getOrders();
         //adapter
-        AddedMenusAdapter<MenuItem> adpater = new AddedMenusAdapter<>(this, addedMenus);
+        AddedOrdersAdapter<Order> adpater = new AddedOrdersAdapter<>(this, addedOrders);
         addedOrderslistView.setAdapter(adpater);
 
         addOrderButton.setOnClickListener(new View.OnClickListener() {
@@ -124,7 +123,7 @@ public class AddOrderActivity extends AppCompatActivity {
         cancelOrderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                app.getMenuItemController().getMenus().clear();
+                app.getOrderController().getOrders().clear();
                 startActivity(new Intent(AddOrderActivity.this, CustomerActivity.class));
 
             }

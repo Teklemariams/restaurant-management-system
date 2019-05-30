@@ -37,7 +37,6 @@
         <activity
             android:name=".customer.AddOrderActivity"
             android:label="@string/title_addneworder_acctivity" />
-        <activity android:name=".customer.MyOrdersActivity" />
         <activity android:name=".customer.BillActivity" />
         <activity
             android:name=".manager.ManagerLoginActivity"

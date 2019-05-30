@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
+
 import com.wengel.astenagaj.R;
 import com.wengel.astenagaj.customer.AddOrderActivity;
 import com.wengel.astenagaj.models.MenuItem;
@@ -18,6 +19,7 @@ public class TableAndQuantityActivity extends AppCompatActivity {
     private Spinner mealQuantitySpinner;
     private Spinner tableNoSpinner;
     private Bundle bundle = new Bundle();
+    private Intent intent;
 
 
     @Override
@@ -35,14 +37,13 @@ public class TableAndQuantityActivity extends AppCompatActivity {
                 int selectedPosition1 = tableNoSpinner.getSelectedItemPosition();
                 int tableNo = selectedPosition1++;
                 int selectedPosition2 = mealQuantitySpinner.getSelectedItemPosition();
-                int mealQuantity = selectedPosition2++;
+                int mealQuantity = selectedPosition2 + 1;
                 App app = (App) getApplication();
-                int lastIndex = app.getMenuItemController().getMenus().size()-1;
-                MenuItem lastMenuItem =app.getMenuItemController().getMenus().get(lastIndex);
+                int lastIndex = app.getMenuItemController().getMenus().size() - 1;
+                MenuItem lastMenuItem = app.getMenuItemController().getMenus().get(lastIndex);
                 Order order = new Order(lastMenuItem, mealQuantity, tableNo, "Kebebush", "pending", false);
                 app.getOrderController().getOrders().add(order);
-                Intent intent = new Intent(TableAndQuantityActivity.this, AddOrderActivity.class);
-//                bundle.putInt(Constants.KEY_ORDER_TABLE_NO, tableNo);
+                intent = new Intent(TableAndQuantityActivity.this, AddOrderActivity.class);
 //                bundle.putInt(Constants.KEY_ORDER_QUANTITY, mealQuantity);
 //                intent.putExtras(bundle);
                 startActivity(intent);
