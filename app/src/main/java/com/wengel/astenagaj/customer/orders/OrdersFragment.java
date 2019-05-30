@@ -8,7 +8,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -16,10 +15,6 @@ import android.widget.TextView;
 import com.pnikosis.materialishprogress.ProgressWheel;
 import com.wengel.astenagaj.R;
 import com.wengel.astenagaj.customer.menus.AddOrderActivity;
-import com.wengel.astenagaj.customer.menus.AddedOrdersAdapter;
-import com.wengel.astenagaj.customer.menus.MenuItemAdapter;
-import com.wengel.astenagaj.customer.menus.TableAndQuantityActivity;
-import com.wengel.astenagaj.models.MenuItem;
 import com.wengel.astenagaj.models.Order;
 import com.wengel.astenagaj.util.App;
 
@@ -42,6 +37,7 @@ public class OrdersFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View myOrdersRootView = inflater.inflate(R.layout.fragment_orders, container, false);
+        App app = (App) getActivity().getApplication();
 
 //        progressWheel = menuRootView.findViewById(R.id.menu_progress_wheel);
 //        statusInfoLabel = menuRootView.findViewById(R.id.menu_statusInfoLabel);
@@ -59,8 +55,18 @@ public class OrdersFragment extends Fragment {
         });
         //data
         myOrders = new ArrayList<>();
-        App app = (App) getActivity().getApplication();
         myOrders = app.getOrderController().getOrders();
+        //calculating total price
+        double totalPrice = 0;
+        for (int i = 0; i < myOrders.size(); i++) {
+            int quantity = myOrders.get(i).getQuantityOrdered();
+            double price = myOrders.get(i).getMenuItem().getPrice();
+            double orderPrice = quantity * price;
+            totalPrice += orderPrice;
+        }
+
+        totalPriceTv.setText(String.valueOf(totalPrice + " Br"));
+
 
 //        listFillerFromApi();
 

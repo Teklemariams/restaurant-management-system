@@ -42,12 +42,11 @@ public class AddOrderActivity extends AppCompatActivity {
 
         quantiyAndTableNoIntent = getIntent();
         quantiyAndTableNoBundle = quantiyAndTableNoIntent.getExtras();
+        final App app = (App) getApplication();
 
         //data
         addedOrders = new ArrayList<>();
-//        orders = new ArrayList<>();
-//        int tableNo = quantiyAndTableNoBundle.getInt(Constants.KEY_ORDER_TABLE_NO);
-//        int mealQuantity = quantiyAndTableNoBundle.getInt(Constants.KEY_ORDER_QUANTITY);
+        addedOrders = app.getOrderController().getOrders();
         //adapter
         AddedOrdersAdapter<Order> adpater = new AddedOrdersAdapter<>(this, addedOrders);
         addedOrderslistView.setAdapter(adpater);
@@ -76,7 +75,6 @@ public class AddOrderActivity extends AppCompatActivity {
         cancelOrderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                App app = (App) getApplication();
                 app.getOrderController().getOrders().clear();
                 startActivity(new Intent(AddOrderActivity.this, CustomerActivity.class));
 
@@ -96,7 +94,6 @@ public class AddOrderActivity extends AppCompatActivity {
 
         //data
         addedOrders = new ArrayList<>();
-//        orders = new ArrayList<>();
         final App app = (App) getApplication();
         addedOrders = app.getOrderController().getOrders();
         //adapter

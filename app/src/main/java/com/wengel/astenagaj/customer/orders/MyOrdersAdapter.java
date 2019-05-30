@@ -32,7 +32,7 @@ public class MyOrdersAdapter<Order> extends ArrayAdapter<Order> {
 
         // data in to the views
         orderName.setText(order.getMenuItem().getName());
-        orderedQuantity.setText(String.valueOf(order.getQuantity()));
+        orderedQuantity.setText(String.valueOf(order.getQuantityOrdered()));
         orderImageView.setImageResource(order.getMenuItem().getImageId());
         myOrderStatus.setText(order.getStatus());
         return convertView;

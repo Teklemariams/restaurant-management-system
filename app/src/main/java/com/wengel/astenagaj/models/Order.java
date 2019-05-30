@@ -2,7 +2,7 @@ package com.wengel.astenagaj.models;
 
 public class Order {
     private MenuItem menuItem;
-    private int quantity;
+    private int quantityOrdered;
     private int tableNo;
     private String waiterHandling;
     private String status;
@@ -10,7 +10,7 @@ public class Order {
 
     public Order(MenuItem menuItem, int quantity, int tableNo, String waiterHandling, String status, boolean isPaid) {
         this.menuItem = menuItem;
-        this.quantity = quantity;
+        this.quantityOrdered = quantity;
         this.tableNo = tableNo;
         this.waiterHandling = waiterHandling;
         this.status = status;
@@ -57,12 +57,12 @@ public class Order {
         isPaid = paid;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getQuantityOrdered() {
+        return quantityOrdered;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setQuantityOrdered(int quantityOrdered) {
+        this.quantityOrdered = quantityOrdered;
     }
 
     @Override

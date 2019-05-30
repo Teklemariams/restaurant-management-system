@@ -37,10 +37,11 @@ public class TableAndQuantityActivity extends AppCompatActivity {
                 int selectedPosition2 = mealQuantitySpinner.getSelectedItemPosition();
                 int mealQuantity = selectedPosition2 + 1;
                 App app = (App) getApplication();
+                //to get the last menu added -last foodItem selected
                 int lastIndex = app.getMenuItemController().getMenus().size() - 1;
                 MenuItem lastMenuItem = app.getMenuItemController().getMenus().get(lastIndex);
                 Order order = new Order(lastMenuItem, mealQuantity, tableNo, "Kebebush", "pending", false);
-                app.getOrderController().getOrders().add(order);
+                app.getOrderController().addOrder(order);
                 intent = new Intent(TableAndQuantityActivity.this, AddOrderActivity.class);
 //                bundle.putInt(Constants.KEY_ORDER_QUANTITY, mealQuantity);
 //                intent.putExtras(bundle);
