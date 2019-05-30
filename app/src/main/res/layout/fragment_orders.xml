@@ -1,69 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/home_must_see_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Must see "
-            android:textColor="@color/colorPrimary"
-            android:textSize="20sp" />
-
-
         <ListView
-            android:id="@+id/mustseeattractions_list_view"
+            android:id="@+id/orders_list_view"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
         </ListView>
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:orientation="vertical">
-
-        <com.pnikosis.materialishprogress.ProgressWheel
-            android:id="@+id/home_progress_wheel"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center_horizontal"
-            app:matProg_barColor="@color/colorPrimary"
-            app:matProg_circleRadius="60dp"
-            app:matProg_progressIndeterminate="true" />
-
-        <TextView
-            android:id="@+id/home_statusInfoLabel"
+        <LinearLayout
+            android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/home_progress_wheel"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
-            android:text="Please Retry"
-            android:textColor="@color/red"
-            android:textSize="20dp"
-            tools:textColor="@color/red" />
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/total_price_relL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/titleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:text="Total price: "
+                    android:textColor="@color/black"
+                    tools:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/myOrders_totalPrice_label"
+                    style="@style/titleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="60.00" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/requestbill_andupdate_relL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/myOrders_requestbill_bn"
+                    style="@style/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Request bill " />
+
+                <Button
+                    android:id="@+id/myOrder_update_bn"
+                    style="@style/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:text="Update " />
+            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 
-
 </RelativeLayout>
-
-
-
-

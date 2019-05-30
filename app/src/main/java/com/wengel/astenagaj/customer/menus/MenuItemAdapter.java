@@ -32,10 +32,9 @@ public class MenuItemAdapter<MenuItem> extends ArrayAdapter<MenuItem> {
         TextView menuItemName = convertView.findViewById(R.id.menuitem_name_tv);
         TextView menuItemPrice = convertView.findViewById(R.id.menuitem_price_tv);
         // data in to the views
-
-        //for image to be implemented
         menuItemName.setText(menuItem.getName());
-        menuItemPrice.setText(String.valueOf(menuItem.getPrice()+"Br"));
+        menuItemPrice.setText(String.valueOf(menuItem.getPrice() + "Br"));
+        menuItemImageView.setImageResource(menuItem.getImageId());
 
         return convertView;
 

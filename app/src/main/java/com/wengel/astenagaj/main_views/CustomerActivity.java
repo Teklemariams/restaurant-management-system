@@ -13,9 +13,8 @@ import android.view.MenuItem;
 
 import com.wengel.astenagaj.R;
 import com.wengel.astenagaj.customer.CommentFragment;
-import com.wengel.astenagaj.customer.MenusFragment;
-import com.wengel.astenagaj.customer.OrdersFragment;
-import com.wengel.astenagaj.util.Constants;
+import com.wengel.astenagaj.customer.menus.MenusFragment;
+import com.wengel.astenagaj.customer.orders.OrdersFragment;
 
 public class CustomerActivity extends AppCompatActivity {
     private DrawerLayout customerDrawer;

@@ -29,9 +29,9 @@ public class AddedOrdersAdapter<Order> extends ArrayAdapter<Order> {
         TextView menuItemName = convertView.findViewById(R.id.addedmenuitem_name_tv);
         TextView menuItemQuantity = convertView.findViewById(R.id.addedmenuitem_quantity_label);
         // data in to the views
-        //for image to be implemented
         menuItemName.setText(order.getMenuItem().getName());
         menuItemQuantity.setText(String.valueOf(order.getQuantity()));
+        orderImageView.setImageResource(order.getMenuItem().getImageId());
         return convertView;
     }
 }

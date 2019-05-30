@@ -1,4 +1,4 @@
-package com.wengel.astenagaj.customer;
+package com.wengel.astenagaj.customer.menus;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,9 +10,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.wengel.astenagaj.R;
-import com.wengel.astenagaj.customer.menus.AddedOrdersAdapter;
 import com.wengel.astenagaj.main_views.CustomerActivity;
-import com.wengel.astenagaj.models.MenuItem;
 import com.wengel.astenagaj.models.Order;
 import com.wengel.astenagaj.util.App;
 

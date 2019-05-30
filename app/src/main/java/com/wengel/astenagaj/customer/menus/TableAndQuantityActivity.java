@@ -8,11 +8,9 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 import com.wengel.astenagaj.R;
-import com.wengel.astenagaj.customer.AddOrderActivity;
 import com.wengel.astenagaj.models.MenuItem;
 import com.wengel.astenagaj.models.Order;
 import com.wengel.astenagaj.util.App;
-import com.wengel.astenagaj.util.Constants;
 
 public class TableAndQuantityActivity extends AppCompatActivity {
     private Button continueButton;

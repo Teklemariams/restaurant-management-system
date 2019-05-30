@@ -35,9 +35,9 @@
             android:label="@string/title_activity_customer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".customer.AddOrderActivity"
+            android:name=".customer.menus.AddOrderActivity"
             android:label="@string/title_addneworder_acctivity" />
-        <activity android:name=".customer.BillActivity" />
+        <activity android:name=".customer.orders.BillActivity" />
         <activity
             android:name=".manager.ManagerLoginActivity"
             android:label="@string/title_activity_manager_login" />

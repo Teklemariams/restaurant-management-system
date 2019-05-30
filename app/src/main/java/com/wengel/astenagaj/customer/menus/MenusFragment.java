@@ -1,4 +1,4 @@
-package com.wengel.astenagaj.customer;
+package com.wengel.astenagaj.customer.menus;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -37,7 +37,6 @@ public class MenusFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-//        return inflater.inflate(R.layout.fragment_menus, container, false);
         View menuRootView = inflater.inflate(R.layout.fragment_menus, container, false);
 
 //        progressWheel = menuRootView.findViewById(R.id.menu_progress_wheel);
@@ -77,15 +76,17 @@ public class MenusFragment extends Fragment {
     }
 
     private void localListPopulater() {
-        menus.add(new MenuItem("Beyaynet", 30.00));
-        menus.add(new MenuItem("Tibs", 30.00));
-        menus.add(new MenuItem("Firfir", 30.00));
-        menus.add(new MenuItem("Kikil", 30.00));
-        menus.add(new MenuItem("TIbs wot", 30.00));
-        menus.add(new MenuItem("Atikilt", 30.00));
-        menus.add(new MenuItem("Firfir", 30.00));
-        menus.add(new MenuItem("Firfir", 30.00));
-        menus.add(new MenuItem("Firfir", 30.00));
+        menus.add(new MenuItem("Beyaynet", R.drawable.beyaynet, 50.00, 0));
+        menus.add(new MenuItem("Firfir", R.drawable.splashscreen_image, 30.00, 0));
+        menus.add(new MenuItem("Tibs", R.drawable.tibs, 55.00, 0));
+        menus.add(new MenuItem("Tib firfir", R.drawable.splashscreen_image, 50.00, 0));
+        menus.add(new MenuItem("Doro wot", R.drawable.splashscreen_image, 50.00, 0));
+        menus.add(new MenuItem("Kikil", R.drawable.splashscreen_image, 50.00, 0));
+        menus.add(new MenuItem("Atikilt", R.drawable.beyaynet, 50.00, 0));
+        menus.add(new MenuItem("Atikilt", R.drawable.beyaynet, 50.00, 0));
+        menus.add(new MenuItem("Atikilt", R.drawable.beyaynet, 50.00, 0));
+        menus.add(new MenuItem("Atikilt", R.drawable.beyaynet, 50.00, 0));
+
     }
 
 }

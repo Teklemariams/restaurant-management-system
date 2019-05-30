@@ -2,8 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@android:color/white">
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,24 +22,24 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true">
         <!--<com.pnikosis.materialishprogress.ProgressWheel-->
-            <!--android:id="@+id/attraction_progress_wheel"-->
-            <!--android:layout_width="60dp"-->
-            <!--android:layout_height="60dp"-->
-            <!--android:layout_gravity="center_horizontal"-->
-            <!--app:matProg_barColor="@color/colorPrimary"-->
-            <!--app:matProg_circleRadius="60dp"-->
-            <!--app:matProg_progressIndeterminate="true" />-->
+        <!--android:id="@+id/attraction_progress_wheel"-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--app:matProg_barColor="@color/colorPrimary"-->
+        <!--app:matProg_circleRadius="60dp"-->
+        <!--app:matProg_progressIndeterminate="true" />-->
 
         <!--<TextView-->
-            <!--android:layout_marginTop="5dp"-->
-            <!--android:id="@+id/attraction_statusInfoLabel"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_below="@id/home_progress_wheel"-->
-            <!--android:layout_gravity="center_horizontal"-->
-            <!--android:textColor="@color/red"-->
-            <!--android:textSize="20dp"-->
-            <!--tools:textColor="@color/red" />-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:id="@+id/attraction_statusInfoLabel"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/home_progress_wheel"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:textColor="@color/red"-->
+        <!--android:textSize="20dp"-->
+        <!--tools:textColor="@color/red" />-->
 
 
     </LinearLayout>
