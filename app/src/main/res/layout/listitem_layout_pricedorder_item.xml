@@ -13,7 +13,7 @@
         android:src="@drawable/restaurant_image" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -75,7 +75,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="20dp"
         android:orientation="vertical">
 
         <LinearLayout

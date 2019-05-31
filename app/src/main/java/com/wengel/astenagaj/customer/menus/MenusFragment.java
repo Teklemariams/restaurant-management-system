@@ -76,16 +76,23 @@ public class MenusFragment extends Fragment {
     }
 
     private void localListPopulater() {
-        menus.add(new MenuItem("Beyaynet", R.drawable.beyaynet, 50.00, 0));
-        menus.add(new MenuItem("Firfir", R.drawable.splashscreen_image, 30.00, 0));
-        menus.add(new MenuItem("Tibs", R.drawable.tibs, 55.00, 0));
-        menus.add(new MenuItem("Tib firfir", R.drawable.splashscreen_image, 50.00, 0));
-        menus.add(new MenuItem("Doro wot", R.drawable.splashscreen_image, 50.00, 0));
-        menus.add(new MenuItem("Kikil", R.drawable.splashscreen_image, 50.00, 0));
-        menus.add(new MenuItem("Atikilt", R.drawable.beyaynet, 50.00, 0));
-        menus.add(new MenuItem("Atikilt", R.drawable.beyaynet, 50.00, 0));
-        menus.add(new MenuItem("Atikilt", R.drawable.beyaynet, 50.00, 0));
-        menus.add(new MenuItem("Atikilt", R.drawable.beyaynet, 50.00, 0));
+        menus.add(new MenuItem("Beyaynet", R.drawable.beyaynet, 40.00, 0));
+        menus.add(new MenuItem("Shiro", R.drawable.shiro, 40.00, 0));
+        menus.add(new MenuItem("Firfir", R.drawable.firfir, 35.00, 0));
+        menus.add(new MenuItem("Suf fitfit", R.drawable.suf_fitfit, 35.00, 0));
+        menus.add(new MenuItem("Kikil", R.drawable.kikil, 50.00, 0));
+        menus.add(new MenuItem("Tibs", R.drawable.tibs, 50.00, 0));
+        menus.add(new MenuItem("Bozena", R.drawable.bozena, 50.00, 0));
+        menus.add(new MenuItem("Siga firfir", R.drawable.tibs_firfir, 45.00, 0));
+        menus.add(new MenuItem("Dulet", R.drawable.dulet, 50.00, 0));
+        menus.add(new MenuItem("Key Wot", R.drawable.key_wot, 50.00, 0));
+        menus.add(new MenuItem("Tea", R.drawable.shay, 5.00, 0));
+        menus.add(new MenuItem("Coffee", R.drawable.cofee, 5.00, 0));
+        menus.add(new MenuItem("Yejebena buna", R.drawable.yejebena_buna, 5.00, 0));
+        menus.add(new MenuItem("Espris ", R.drawable.espris, 5.00, 0));
+        menus.add(new MenuItem("Makiato ", R.drawable.makiato, 7.00, 0));
+        menus.add(new MenuItem("Wetet ", R.drawable.milk, 10.00, 0));
+        menus.add(new MenuItem("Kishir(Ginjer tea)", R.drawable.kishir, 5.00, 0));
 
     }
 

@@ -7,17 +7,57 @@
     tools:context=".customer.orders.BillActivity">
 
     <TextView
-        android:text="Your total bill is:"
+        style="@style/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/titleText"
-        android:layout_marginLeft="20dp"/>
+        android:layout_marginLeft="20dp"
+        android:text="Your total bill is:" />
 
     <ListView
         android:id="@+id/priced_orders_list_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
     </ListView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/requestbill_andupdate_relL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/titleText"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total price: " />
+
+            <TextView
+                style="@style/titleText"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120.00" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thanks for coming !!" />
+    </LinearLayout>
+
 
 </LinearLayout>
