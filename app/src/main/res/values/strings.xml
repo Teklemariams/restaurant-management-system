@@ -1,7 +1,7 @@
 <resources>
-    <string name="title_activity_welcome">Welcome Activity</string>
-    <string name="title_activity_manager">Manager Activity</string>
-    <string name="title_activity_customer">Customer Activity</string>
+    <string name="title_activity_welcome">Welcome </string>
+    <string name="title_activity_manager">Manager </string>
+    <string name="title_activity_customer">Customer</string>
     <string name="title_menusMgt">Menus management</string>
     <string name="title_ordersMgt">Order management</string>
     <string name="title_employees">Employee management</string>
@@ -28,8 +28,8 @@
         completions."
     </string>
     <string name="title_addneworder_acctivity">Adding order</string>
-    <string name="title_activity_table_and_quantity">Entering table and quantityOrdered</string>
-    <string name="title_activity_bill">Your bill</string>
+    <string name="title_activity_table_and_quantity">Adding Order</string>
+    <string name="title_activity_bill">Bill</string>
     <string-array name="table_nos_dropdown_list">
         <item>01</item>
         <item>02</item>

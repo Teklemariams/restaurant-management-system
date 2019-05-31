@@ -15,6 +15,14 @@ public class Constants {
 
     //Fragments to load
     public static final String KEY_CUSTOMER_FRG_TO_LOAD = "Customer frag to load";
+    //Employee constants
+    public static final String KEY_EMPLOYEE_NAMESPACE = "Employee name";
+    public static final String KEY_EMPLOYEE_EMPLOYEE_ID = "Employee ID";
+    public static final String KEY_EMPLOYEE_AGE = "Employee age";
+    public static final String KEY_EMPLOYEE_EFFICIENCY = "Employee efficency";
+    public static final String KEY_EMPLOYEE_HIREDATE = "Employee hire date";
+    public static final String KEY_EMPLOYEE_JOB_TITLE = "Employee Job title";
+
 
 
 }
