@@ -34,29 +34,30 @@
             android:id="@+id/requestbill_andupdate_relL"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <TextView
                 style="@style/titleText"
-                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total price: " />
+                android:layout_marginTop="15dp"
+                android:text="Total price: "
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/totalBilledAmount_tv"
                 style="@style/titleText"
-                android:textColor="@color/colorPrimaryDark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0.00" />
+                android:text="0.00"
+                android:textColor="@color/colorPrimaryDark" />
         </LinearLayout>
 
         <TextView
             style="@style/titleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:text="Thanks for coming !!" />
     </LinearLayout>
 
