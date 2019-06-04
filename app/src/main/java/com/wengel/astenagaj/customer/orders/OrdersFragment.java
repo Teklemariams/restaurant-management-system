@@ -64,14 +64,7 @@ public class OrdersFragment extends Fragment {
         myOrders = new ArrayList<>();
         myOrders = app.getOrderController().getOrders();
         //calculating total price
-        double totalPrice = 0;
-        for (int i = 0; i < myOrders.size(); i++) {
-            int quantity = myOrders.get(i).getQuantityOrdered();
-            double price = myOrders.get(i).getMenuItem().getPrice();
-            double orderPrice = quantity * price;
-            totalPrice += orderPrice;
-        }
-
+        double totalPrice = app.getOrderController().getOrdersTotalPrice();
         totalPriceTv.setText(String.valueOf(totalPrice + " Br"));
 
 

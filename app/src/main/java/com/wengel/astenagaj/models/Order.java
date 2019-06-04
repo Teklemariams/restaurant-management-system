@@ -69,4 +69,11 @@ public class Order {
     public String toString() {
         return super.toString();
     }
+
+    public double getTotalPrice() {
+        int quantity = getQuantityOrdered();
+        double price = getMenuItem().getPrice();
+        return quantity * price;
+    }
+
 }

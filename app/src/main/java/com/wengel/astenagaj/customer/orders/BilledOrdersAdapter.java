@@ -12,9 +12,9 @@ import com.wengel.astenagaj.R;
 
 import java.util.ArrayList;
 
-public class PricedOrdersAdapter<Order> extends ArrayAdapter<Order> {
+public class BilledOrdersAdapter<Order> extends ArrayAdapter<Order> {
 
-    public PricedOrdersAdapter(Context context, ArrayList<Order> objects) {
+    public BilledOrdersAdapter(Context context, ArrayList<Order> objects) {
         super(context, 0, objects);
 
     }
