@@ -65,15 +65,15 @@ public class Order {
         this.quantityOrdered = quantityOrdered;
     }
 
-    @Override
-    public String toString() {
-        return super.toString();
-    }
-
     public double getTotalPrice() {
         int quantity = getQuantityOrdered();
         double price = getMenuItem().getPrice();
         return quantity * price;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wengel.astenagaj">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -42,12 +43,12 @@
         <activity
             android:name=".manager.ManagerLoginActivity"
             android:label="@string/title_activity_manager_login" />
-        <activity android:name=".manager.OrderDetailActivity" />
-        <activity android:name=".manager.PaymentStatusActivity" />
-        <activity android:name=".manager.EmployeeDetailActivity" />
-        <activity android:name=".manager.EmployeeEvaluationActivity" />
-        <activity android:name=".manager.AddNewEmployeeActivity" />
-        <activity android:name=".manager.SalesReportActivity" />
+        <activity android:name=".manager.order_management.OrderDetailActivity" />
+        <activity android:name=".manager.order_management.PaymentStatusActivity" />
+        <activity android:name=".manager.employee_management.EmployeeDetailActivity" />
+        <activity android:name=".manager.employee_management.EmployeeEvaluationActivity" />
+        <activity android:name=".manager.employee_management.AddNewEmployeeActivity" />
+        <activity android:name=".manager.sales_report.SalesReportActivity" />
         <activity android:name=".customer.menus.TableAndQuantityActivity"
             android:label="@string/title_activity_table_and_quantity"></activity>
     </application>

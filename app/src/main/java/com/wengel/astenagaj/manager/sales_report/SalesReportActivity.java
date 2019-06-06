@@ -1,4 +1,4 @@
-package com.wengel.astenagaj.manager;
+package com.wengel.astenagaj.manager.sales_report;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class BillActivity extends AppCompatActivity {
 
     private ListView priceListlistView;
-    private ArrayList<Order> pricedOrders;
+    private ArrayList<Order> pricedOrders; //those submitted
     private TextView totalBillTextV;
 
     @Override
@@ -31,7 +31,7 @@ public class BillActivity extends AppCompatActivity {
 
         //data
         pricedOrders = new ArrayList<>();
-        pricedOrders = app.getOrderController().getOrders();
+        pricedOrders = app.getOrderController().getSubmittedOrders();
         //adapter
         BilledOrdersAdapter<Order> adpater = new BilledOrdersAdapter<>(this, pricedOrders);
         priceListlistView.setAdapter(adpater);

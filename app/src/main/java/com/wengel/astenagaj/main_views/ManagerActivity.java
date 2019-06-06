@@ -11,10 +11,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.wengel.astenagaj.R;
-import com.wengel.astenagaj.manager.EmployeesFragment;
+import com.wengel.astenagaj.manager.employee_management.EmployeesFragment;
 import com.wengel.astenagaj.manager.MenusMgtFragment;
-import com.wengel.astenagaj.manager.OrdersMgtFragment;
-import com.wengel.astenagaj.manager.SalesFragment;
+import com.wengel.astenagaj.manager.order_management.OrdersMgtFragment;
+import com.wengel.astenagaj.manager.sales_report.SalesFragment;
 
 public class ManagerActivity extends AppCompatActivity {
     private DrawerLayout mgrDrawer;
@@ -79,7 +79,7 @@ public class ManagerActivity extends AppCompatActivity {
                 .beginTransaction()
                 .replace(R.id.fragment_container,
                         new OrdersMgtFragment()).commit();
-        navigationView.setCheckedItem(R.id.navigation_foodMgt);
+        navigationView.setCheckedItem(R.id.navigation_orders);
 
     }
 }

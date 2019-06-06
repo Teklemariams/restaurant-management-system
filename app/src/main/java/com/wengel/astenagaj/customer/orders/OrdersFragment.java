@@ -21,7 +21,7 @@ import com.wengel.astenagaj.util.App;
 import java.util.ArrayList;
 
 public class OrdersFragment extends Fragment {
-    ArrayList<Order> myOrders;
+    ArrayList<Order> myOrders; // (submitted orders)
     ListView myOrdersListView;
     private ProgressWheel progressWheel;
     private TextView statusInfoLabel;
@@ -62,8 +62,8 @@ public class OrdersFragment extends Fragment {
 
         //data
         myOrders = new ArrayList<>();
-        myOrders = app.getOrderController().getOrders();
-        //calculating total price
+        myOrders = app.getOrderController().getSubmittedOrders(); //since they refer to submitted orders
+        // calculating total price
         double totalPrice = app.getOrderController().getOrdersTotalPrice();
         totalPriceTv.setText(String.valueOf(totalPrice + " Br"));
 

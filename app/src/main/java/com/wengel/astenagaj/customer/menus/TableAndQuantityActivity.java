@@ -16,8 +16,7 @@ public class TableAndQuantityActivity extends AppCompatActivity {
     private Button continueButton;
     private Spinner mealQuantitySpinner;
     private Spinner tableNoSpinner;
-    private Bundle bundle = new Bundle();
-    private Intent intent;
+
 
 
     @Override
@@ -40,11 +39,9 @@ public class TableAndQuantityActivity extends AppCompatActivity {
                 //to get the last menu added -last foodItem selected
                 int lastIndex = app.getMenuItemController().getMenus().size() - 1;
                 MenuItem lastMenuItem = app.getMenuItemController().getMenus().get(lastIndex);
-                Order order = new Order(lastMenuItem, mealQuantity, tableNo, "Kebebush", "pending", false);
+                Order order = new Order(lastMenuItem, mealQuantity, tableNo, "Tigist", "pending", false);
                 app.getOrderController().addOrder(order);
-                intent = new Intent(TableAndQuantityActivity.this, AddOrderActivity.class);
-//                bundle.putInt(Constants.KEY_ORDER_QUANTITY, mealQuantity);
-//                intent.putExtras(bundle);
+                Intent intent = new Intent(TableAndQuantityActivity.this, AddOrderActivity.class);
                 startActivity(intent);
             }
         });

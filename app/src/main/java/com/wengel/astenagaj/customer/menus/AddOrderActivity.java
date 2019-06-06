@@ -21,18 +21,20 @@ public class AddOrderActivity extends AppCompatActivity {
     private Button addOrderButton;
     private Button cancelOrderButton;
     private Button orderButton;
-    private ArrayList<Order> addedOrders;
     private ArrayList<Order> orders;
+    private ArrayList<Order> submittedOrders;
+    App app;
+
     private Spinner tableNoSpinner;
 
     Intent quantiyAndTableNoIntent;
     Bundle quantiyAndTableNoBundle;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_order);
+        app = (App) getApplication();
 
         addedOrderslistView = findViewById(R.id.added_orders_list_view);
         addOrderButton = findViewById(R.id.addorder_add_bn);
@@ -42,13 +44,14 @@ public class AddOrderActivity extends AppCompatActivity {
 
         quantiyAndTableNoIntent = getIntent();
         quantiyAndTableNoBundle = quantiyAndTableNoIntent.getExtras();
-        final App app = (App) getApplication();
+//        submittedOrders = new ArrayList<>();
 
         //data
-        addedOrders = new ArrayList<>();
-        addedOrders = app.getOrderController().getOrders();
+//        orders = new ArrayList<>();
+        orders = app.getOrderController().getOrders();
+        submittedOrders = app.getOrderController().getSubmittedOrders(); //those orders that are submitted
         //adapter
-        AddedOrdersAdapter<Order> adpater = new AddedOrdersAdapter<>(this, addedOrders);
+        AddedOrdersAdapter<Order> adpater = new AddedOrdersAdapter<>(this, orders);
         addedOrderslistView.setAdapter(adpater);
 
         addOrderButton.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +63,17 @@ public class AddOrderActivity extends AppCompatActivity {
         orderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                int lastIndex = app.getOrderController().getOrders().size() - 1;
+//                Order lastOrder = app.getOrderController().getOrders().get(lastIndex);
+//                int lastSelectedTable = lastOrder.getTableNo();
+//                for (int i = 0; i < orders.size(); i++) {
+//                    if (orders.get(i).getTableNo() == lastSelectedTable) {
+//                        app.getOrderController().addSubmittedOrder(orders.get(i));
+//                    } else {
+//                        app.getOrderController().deleteSubmittedOrder(i);
+//                    }
+//                }
+
                 //TODO - to best sent to api
 //                Intent i = new Intent(AddOrderActivity.this, CustomerActivity.class);
 //                Bundle b = new Bundle();
@@ -67,8 +81,6 @@ public class AddOrderActivity extends AppCompatActivity {
 //                i.putExtras(b);
                 startActivity(new Intent(AddOrderActivity.this, CustomerActivity.class));
                 Toast.makeText(AddOrderActivity.this, "Your Order is submitted", Toast.LENGTH_LONG).show();
-
-
             }
         });
 
@@ -76,6 +88,7 @@ public class AddOrderActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 app.getOrderController().getOrders().clear();
+                app.getOrderController().getSubmittedOrders().clear();
                 startActivity(new Intent(AddOrderActivity.this, CustomerActivity.class));
 
             }
@@ -85,6 +98,8 @@ public class AddOrderActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        app = (App) getApplication();
+
         addedOrderslistView = findViewById(R.id.added_orders_list_view);
         addOrderButton = findViewById(R.id.addorder_add_bn);
         cancelOrderButton = findViewById(R.id.addorder_cancel_bn);
@@ -93,11 +108,11 @@ public class AddOrderActivity extends AppCompatActivity {
         quantiyAndTableNoBundle = quantiyAndTableNoIntent.getExtras();
 
         //data
-        addedOrders = new ArrayList<>();
-        final App app = (App) getApplication();
-        addedOrders = app.getOrderController().getOrders();
+//        orders = new ArrayList<>();
+        orders = app.getOrderController().getOrders();
+        submittedOrders = app.getOrderController().getSubmittedOrders(); //those orders that are submitted
         //adapter
-        AddedOrdersAdapter<Order> adpater = new AddedOrdersAdapter<>(this, addedOrders);
+        AddedOrdersAdapter<Order> adpater = new AddedOrdersAdapter<>(this, orders);
         addedOrderslistView.setAdapter(adpater);
 
         addOrderButton.setOnClickListener(new View.OnClickListener() {
@@ -109,22 +124,34 @@ public class AddOrderActivity extends AppCompatActivity {
         orderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO -- to best sent to api
-                Toast.makeText(AddOrderActivity.this, "Your Order is submitted", Toast.LENGTH_LONG).show();
+                int lastIndex = app.getOrderController().getOrders().size() - 1;
+                Order lastOrder = app.getOrderController().getOrders().get(lastIndex);
+                int lastSelectedTable = lastOrder.getTableNo();
+                for (int i = 0; i < orders.size(); i++) {
+                    if (orders.get(i).getTableNo() == lastSelectedTable) {
+                        app.getOrderController().addSubmittedOrder(orders.get(i));
+                    } else {
+                        app.getOrderController().deleteSubmittedOrder(i);
+                    }
+                }
+                //TODO - to best sent to api
+//                Intent i = new Intent(AddOrderActivity.this, CustomerActivity.class);
+//                Bundle b = new Bundle();
+//                b.putString(Constants.KEY_CUSTOMER_FRG_TO_LOAD, "Menus frag");
+//                i.putExtras(b);
                 startActivity(new Intent(AddOrderActivity.this, CustomerActivity.class));
-
+                Toast.makeText(AddOrderActivity.this, "Your Order is submitted", Toast.LENGTH_LONG).show();
             }
         });
+
         cancelOrderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 app.getOrderController().getOrders().clear();
+                app.getOrderController().getSubmittedOrders().clear();
                 startActivity(new Intent(AddOrderActivity.this, CustomerActivity.class));
 
             }
         });
-
-
     }
-
 }

@@ -1,4 +1,4 @@
-package com.wengel.astenagaj.manager;
+package com.wengel.astenagaj.manager.employee_management;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

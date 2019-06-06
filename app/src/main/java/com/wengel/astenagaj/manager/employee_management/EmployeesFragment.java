@@ -1,4 +1,4 @@
-package com.wengel.astenagaj.manager;
+package com.wengel.astenagaj.manager.employee_management;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,13 +10,13 @@ import android.view.ViewGroup;
 
 import com.wengel.astenagaj.R;
 
-public class OrdersMgtFragment extends Fragment {
-    public OrdersMgtFragment() {
+public class EmployeesFragment extends Fragment {
+    public EmployeesFragment() {
 
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_orders_mgt, container, false);
+        return inflater.inflate(R.layout.fragment_employees, container, false);
     }
 }
