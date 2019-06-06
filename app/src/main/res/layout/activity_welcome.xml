@@ -8,9 +8,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome !"
+        android:text="Welcome to our Restaurant !"
         style="@style/titleText"/>
     <Button
+        android:background="@color/colorPrimary"
         android:id="@+id/welcome_customerBtn"
         android:text="Continue as customer"
         android:layout_gravity="center_horizontal"
@@ -19,6 +20,7 @@
         android:layout_height="wrap_content"
         style="@style/contentText"/>
     <Button
+        android:background="@color/colorPrimary"
         android:id="@+id/welcome_managerBtn"
         android:text="Continue as manager"
         android:layout_gravity="center_horizontal"

@@ -1,5 +1,6 @@
 package com.wengel.astenagaj.customer.menus;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,10 +12,22 @@ import android.widget.Toast;
 
 import com.wengel.astenagaj.R;
 import com.wengel.astenagaj.main_views.CustomerActivity;
+import com.wengel.astenagaj.models.MenuItem;
 import com.wengel.astenagaj.models.Order;
 import com.wengel.astenagaj.util.App;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.util.ArrayList;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class AddOrderActivity extends AppCompatActivity {
     private ListView addedOrderslistView;
@@ -63,22 +76,19 @@ public class AddOrderActivity extends AppCompatActivity {
         orderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                int lastIndex = app.getOrderController().getOrders().size() - 1;
-//                Order lastOrder = app.getOrderController().getOrders().get(lastIndex);
-//                int lastSelectedTable = lastOrder.getTableNo();
-//                for (int i = 0; i < orders.size(); i++) {
-//                    if (orders.get(i).getTableNo() == lastSelectedTable) {
-//                        app.getOrderController().addSubmittedOrder(orders.get(i));
-//                    } else {
-//                        app.getOrderController().deleteSubmittedOrder(i);
-//                    }
-//                }
-
+                int lastIndex = app.getOrderController().getOrders().size() - 1;
+                Order lastOrder = app.getOrderController().getOrders().get(lastIndex);
+                int lastSelectedTable = lastOrder.getTableNo();
+                for (int i = 0; i < orders.size(); i++) {
+                    if (orders.get(i).getTableNo() == lastSelectedTable) {
+                        app.getOrderController().addSubmittedOrder(orders.get(i));
+                    } else {
+                        app.getOrderController().deleteSubmittedOrder(i);
+                    }
+                }
                 //TODO - to best sent to api
-//                Intent i = new Intent(AddOrderActivity.this, CustomerActivity.class);
-//                Bundle b = new Bundle();
-//                b.putString(Constants.KEY_CUSTOMER_FRG_TO_LOAD, "Menus frag");
-//                i.putExtras(b);
+//                sendOrderToBackEnd();
+
                 startActivity(new Intent(AddOrderActivity.this, CustomerActivity.class));
                 Toast.makeText(AddOrderActivity.this, "Your Order is submitted", Toast.LENGTH_LONG).show();
             }
@@ -94,6 +104,95 @@ public class AddOrderActivity extends AppCompatActivity {
             }
         });
     }
+
+//    private void sendOrderToBackEnd() {
+//        if (AddOrderActivity.this != null) {
+//            AddOrderActivity.this.runOnUiThread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    Toast.makeText(AddOrderActivity.this, "Sending order", Toast.LENGTH_SHORT).show();
+//                }
+//            });
+//
+//        } else return;
+//        //Create the client
+//        OkHttpClient client = new OkHttpClient();
+//
+//        //create attractionRequest
+//        Request orderRequest = new Request.Builder().url("https://astenagaj.zematechs.com/api/order/create").build();
+//
+//        //calling the attractionRequest
+//        client.newCall(orderRequest).enqueue(new Callback() {
+//            @Override
+//            public void onFailure(Call call, IOException e) {
+//                e.printStackTrace();
+////                showStatus(false);
+//                if (AddOrderActivity.this != null) {
+//                    AddOrderActivity.this.runOnUiThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            Toast.makeText(AddOrderActivity.this, "Pleasse retry", Toast.LENGTH_SHORT).show();
+//                        }
+//                    });
+//
+//                } else return;
+//
+//            }
+//
+//            @Override
+//            public void onResponse(Call call, Response response) throws IOException {
+//
+//                String menuJson = response.body().string();
+//
+//                if (response.isSuccessful()) {
+//                    try {
+//                        JSONObject rootJSONonj = new JSONObject(menuJson);
+//                        JSONArray rootJSONarray = rootJSONonj.getJSONArray("data");
+//                        for (int i = 0; i < rootJSONarray.length(); i++) {
+//                            JSONObject menuItem = rootJSONarray.getJSONObject(i);
+//                            String name = menuItem.getString("name");
+//                            double price = menuItem.getDouble("price");
+//                            int quantitySold = menuItem.getInt("quantity_sold");
+////                            showStatus(true);
+//                            if (AddOrderActivity.this != null) {
+//                                AddOrderActivity.this.runOnUiThread(new Runnable() {
+//                                    @Override
+//                                    public void run() {
+//                                        Toast.makeText(AddOrderActivity.this, "Order sent succesfully", Toast.LENGTH_SHORT).show();
+//                                    }
+//                                });
+//
+//                            } else return;
+//
+//
+//                            menus.add(new MenuItem(name, menuItemImage, price, quantitySold));
+//
+//                        }
+//                        Activity activity = getActivity();
+//                        if (activity != null) {
+//                            activity.runOnUiThread(new Runnable() {
+//                                @Override
+//                                public void run() {
+//                                    //adapter
+//                                    MenuItemAdapter<MenuItem> adapter = new MenuItemAdapter<>(getActivity(), menus);
+//                                    menusListView.setAdapter(adapter);
+//                                }
+//                            });
+//
+//                        } else return;
+//
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+////                        showStatus(false);
+//
+//                    }
+//                } else {
+////                    showStatus(false);
+//                }
+//            }
+//        });
+//
+//    }
 
     @Override
     protected void onResume() {

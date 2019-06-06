@@ -17,8 +17,6 @@ public class TableAndQuantityActivity extends AppCompatActivity {
     private Spinner mealQuantitySpinner;
     private Spinner tableNoSpinner;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +43,5 @@ public class TableAndQuantityActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }

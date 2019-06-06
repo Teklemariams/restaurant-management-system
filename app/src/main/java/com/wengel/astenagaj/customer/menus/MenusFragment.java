@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.pnikosis.materialishprogress.ProgressWheel;
 import com.wengel.astenagaj.R;
@@ -81,6 +82,16 @@ public class MenusFragment extends Fragment {
     }
 
     private void getDataFromBackEnd() {
+        Activity activity = getActivity();
+        if (activity != null) {
+            getActivity().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Toast.makeText(getActivity(), "Loading menus", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+        } else return;
         //Create the client
         OkHttpClient client = new OkHttpClient();
 
@@ -93,6 +104,17 @@ public class MenusFragment extends Fragment {
             public void onFailure(Call call, IOException e) {
                 e.printStackTrace();
 //                showStatus(false);
+                Activity activity = getActivity();
+                if (activity != null) {
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(getActivity(), "Please retry", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+                } else return;
+
             }
 
             @Override
@@ -109,8 +131,7 @@ public class MenusFragment extends Fragment {
                             String name = menuItem.getString("name");
                             double price = menuItem.getDouble("price");
                             int quantitySold = menuItem.getInt("quantity_sold");
-//                            showStatus(true);
-
+//
                             int menuItemImage = R.drawable.beyaynet;
                             switch (name) {
                                 case "Shiro":
@@ -165,9 +186,7 @@ public class MenusFragment extends Fragment {
                                     menuItemImage = R.drawable.kishir;
                                     break;
                             }
-
                             menus.add(new MenuItem(name, menuItemImage, price, quantitySold));
-
                         }
                         Activity activity = getActivity();
                         if (activity != null) {

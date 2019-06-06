@@ -43,7 +43,8 @@
         <activity
             android:name=".manager.ManagerLoginActivity"
             android:label="@string/title_activity_manager_login" />
-        <activity android:name=".manager.order_management.OrderDetailActivity" />
+        <activity android:name=".manager.order_management.OrderDetailActivity"
+            android:label="@string/title_activity_order_detail"/>
         <activity android:name=".manager.order_management.PaymentStatusActivity" />
         <activity android:name=".manager.employee_management.EmployeeDetailActivity" />
         <activity android:name=".manager.employee_management.EmployeeEvaluationActivity" />
