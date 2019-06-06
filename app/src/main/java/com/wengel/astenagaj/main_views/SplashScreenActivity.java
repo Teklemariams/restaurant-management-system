@@ -19,7 +19,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         EasySplashScreen splashScreen = new EasySplashScreen(SplashScreenActivity.this)
                 .withFullScreen()
                 .withTargetActivity(WelcomeActivity.class)
-                .withSplashTimeOut(0000)
+                .withSplashTimeOut(4000)
                 .withBackgroundColor(Color.WHITE)
 //                .withHeaderText("Header")
 //                .withFooterText("footer")
