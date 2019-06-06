@@ -185,6 +185,15 @@ public class MenusFragment extends Fragment {
                                 case "Kishir(Ginjer tea)":
                                     menuItemImage = R.drawable.kishir;
                                     break;
+                                case "Yetsom makiato":
+                                    menuItemImage = R.drawable.makiato;
+                                    break;
+                                case "Enkulal Sandwich":
+                                    menuItemImage = R.drawable.enkulal_andwich;
+                                    break;
+                                case "Ful":
+                                    menuItemImage = R.drawable.ful;
+                                    break;
                             }
                             menus.add(new MenuItem(name, menuItemImage, price, quantitySold));
                         }
