@@ -48,19 +48,14 @@ public class MenusFragment extends Fragment {
 
         View menuRootView = inflater.inflate(R.layout.fragment_menus, container, false);
 
-//        progressWheel = menuRootView.findViewById(R.id.menu_progress_wheel);
-//        statusInfoLabel = menuRootView.findViewById(R.id.menu_statusInfoLabel);
-//        statusInfoLabel.setTextColor(getResources().getColor(R.color.green));
-//        statusInfoLabel.setText("Loading menus");
-
         //data
         menus = new ArrayList<>();
 
-//        localListPopulater();
+        localListPopulater();
 
 //        Toast.makeText(getActivity(), "Loading menus ...", Toast.LENGTH_LONG).show();
 
-        getDataFromBackEnd();
+//        getDataFromBackEnd();
 
         //view
         menusListView = menuRootView.findViewById(R.id.menus_list_view);

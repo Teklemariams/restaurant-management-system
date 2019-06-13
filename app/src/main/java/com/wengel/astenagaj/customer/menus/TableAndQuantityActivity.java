@@ -37,7 +37,7 @@ public class TableAndQuantityActivity extends AppCompatActivity {
                 //to get the last menu added -last foodItem selected
                 int lastIndex = app.getMenuItemController().getMenus().size() - 1;
                 MenuItem lastMenuItem = app.getMenuItemController().getMenus().get(lastIndex);
-                Order order = new Order(lastMenuItem, mealQuantity, tableNo, "Tigist", "pending", false);
+                Order order = new Order(lastMenuItem, mealQuantity, tableNo, " - ", "pending", false);
                 app.getOrderController().addOrder(order);
                 Intent intent = new Intent(TableAndQuantityActivity.this, AddOrderActivity.class);
                 startActivity(intent);

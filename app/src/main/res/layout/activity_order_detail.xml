@@ -15,7 +15,7 @@
             android:orientation="horizontal">
 
             <TextView
-                style="@style/contentText"
+                style="@style/listItemText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -32,28 +32,29 @@
                 android:layout_marginTop="20dp"
                 android:text="01" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
-                style="@style/contentText"
+                style="@style/listItemText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
+                android:layout_margin="10dp"
                 android:text="Assign Waiter:"
                 android:textColor="@color/colorPrimary" />
 
-            <TextView
-                android:id="@+id/orderDetail_waiter_tv"
-                style="@style/contentText"
+            <Spinner
+                android:layout_margin="10dp"
+                android:id="@+id/orderDetail_waiterSpinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:text="Tigist" />
+                android:gravity="center_vertical"
+                android:entries="@array/waiter_names_dropdown_list">
+
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -62,7 +63,8 @@
             android:orientation="horizontal">
 
             <TextView
-                style="@style/contentText"
+                android:layout_margin="10dp"
+                style="@style/listItemText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -70,19 +72,23 @@
                 android:text="Update status:"
                 android:textColor="@color/colorPrimary" />
 
-            <TextView
-                android:id="@+id/orderDetail_orderStatus_tv"
-                style="@style/contentText"
+            <Spinner
+                android:layout_margin="10dp"
+                android:id="@+id/orderDetail_statusSpinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:text="pending" />
+                android:gravity="center_vertical"
+                android:entries="@array/orderstatuses_dropdown_list">
+
+            </Spinner>
         </LinearLayout>
+
         <ListView
             android:id="@+id/orderDetail_listView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
         </ListView>
 

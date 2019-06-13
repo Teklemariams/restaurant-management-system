@@ -14,6 +14,7 @@ import android.widget.ListView;
 import com.wengel.astenagaj.R;
 import com.wengel.astenagaj.models.Order;
 import com.wengel.astenagaj.util.App;
+import com.wengel.astenagaj.util.Constants;
 
 import java.util.ArrayList;
 
@@ -21,20 +22,19 @@ public class OrdersMgtFragment extends Fragment {
     private ArrayList<Order> submittedOrders;
     private ArrayList<Order> ordersByTable;
     private ListView ordersListView;
-//    private ProgressWheel progressWheel;
-//    private TextView statusInfoLabel;
-    //    private Bundle bundle = new Bundle();
+
+    private Intent intent;
+    private Bundle bundle;
+
+
     public OrdersMgtFragment() {
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        bundle = new Bundle();
         App app = (App) getActivity().getApplication();
         View ordermgtRootView = inflater.inflate(R.layout.fragment_orders_mgt, container, false);
-//        progressWheel = menuRootView.findViewById(R.id.menu_progress_wheel);
-//        statusInfoLabel = menuRootView.findViewById(R.id.menu_statusInfoLabel);
-//        statusInfoLabel.setTextColor(getResources().getColor(R.color.green));
-//        statusInfoLabel.setText("Loading menus");
 
         //data
         submittedOrders = new ArrayList<>();
@@ -49,29 +49,25 @@ public class OrdersMgtFragment extends Fragment {
             }
         }
 //        Toast.makeText(getActivity(), "Loading menus ...", Toast.LENGTH_LONG).show();
-
 //        listFillerFromApi();
-
         //view
         ordersListView = ordermgtRootView.findViewById(R.id.ordersmgt_list_view);
         //adapter
-        ManagedOrdersAdapter<Order> adapter = new ManagedOrdersAdapter<> (getActivity(), ordersByTable);
+        ManagedOrdersAdapter<Order> adapter = new ManagedOrdersAdapter<>(getActivity(), ordersByTable);
         ordersListView.setAdapter(adapter);
         ordersListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                final MenuItem menu = menus.get(position);
-                Intent intent = new Intent(view.getContext(), OrderDetailActivity.class);
-//                App app = (App) getActivity().getApplication();
-//                app.getMenuItemController().addMenuItem(menu);
-//                bundle.putString(Constants.KEY_MENUITEM_NAME_SPACE, menu.getName());
-//                bundle.putDouble(Constants.KEY_MENUITEM_PRICE, menu.getPrice());
-//                intent.putExtras(bundle);
+                final Order order = ordersByTable.get(position);
+                int tappedTableNo = order.getTableNo();
+                intent = new Intent(view.getContext(), OrderDetailActivity.class);
+                bundle.putInt(Constants.KEY_ORDER_TABLE_NO, tappedTableNo + 1);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
 
         return ordermgtRootView;
-        }
+    }
 
 }

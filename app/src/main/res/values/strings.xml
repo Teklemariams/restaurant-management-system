@@ -43,5 +43,23 @@
         <item>09</item>
         <item>10</item>
     </string-array>
+    <string-array name="waiter_names_dropdown_list">
+        <item>Tigist</item>
+        <item>Gemechu</item>
+        <item>Abebe</item>
+        <item>Haftom</item>
+        <item>Betelhem</item>
+        <item>Azeb</item>
+        <item>Worke</item>
+        <item>Gelana</item>
+        <item>Alemayehu</item>
+        <item>Natnael</item>
+        <item>Tewodros</item>
+    </string-array>
+    <string-array name="orderstatuses_dropdown_list">
+        <item>pending</item>
+        <item>paid</item>
+        <item>not paid</item>
+    </string-array>
 
 </resources>

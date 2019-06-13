@@ -47,7 +47,7 @@ public class ManagedOrdersAdapter<Order> extends ArrayAdapter<Order> {
         TextView orderWaiterNoTv = convertView.findViewById(R.id.managed_order_waiterno_tv);
         TextView orderStatusTv = convertView.findViewById(R.id.managed_order_status_tv);
         // data in to the views
-        orderTableNoTv.setText(String.valueOf(order.getTableNo()));
+        orderTableNoTv.setText(String.valueOf(order.getTableNo()+1));
         orderWaiterNoTv.setText(String.valueOf(order.getWaiterHandling()));
         orderStatusTv.setText(String.valueOf(order.getStatus()));
         orderImageIv.setImageResource(R.drawable.ic_ordermgt);

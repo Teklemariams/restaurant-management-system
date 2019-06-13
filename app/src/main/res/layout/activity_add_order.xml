@@ -53,7 +53,7 @@
     </LinearLayout>
 
     <ListView
-        android:id="@+id/added_orders_list_view"
+        android:id="@+id/added_orders_listView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

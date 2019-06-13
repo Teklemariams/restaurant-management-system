@@ -4,7 +4,7 @@ public class Order {
     private MenuItem menuItem;
     private int quantityOrdered;
     private int tableNo;
-    private String waiterHandling;
+    private String waiterHandling ;
     private String status;
     private boolean isPaid;
 
