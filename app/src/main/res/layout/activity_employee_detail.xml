@@ -17,24 +17,25 @@
             android:layout_height="match_parent">
 
             <TextView
+                style="@style/listItemText"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_weight="2"
                 android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:text="Employ ID:"
-                android:textColor="#000"
-                android:textSize="24sp" />
+                android:textColor="@color/colorPrimary" />
 
             <TextView
+                android:id="@+id/employeDetail_id"
+                style="@style/listItemText"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_weight="3"
                 android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:text="Google/F29/2020"
-                android:textColor="#000"
-                android:textSize="24sp" />
+                android:textColor="#000" />
         </LinearLayout>
 
         <LinearLayout
@@ -42,24 +43,24 @@
             android:layout_height="match_parent">
 
             <TextView
+                style="@style/listItemText"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_weight="2"
                 android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:text="Full Name:"
-                android:textColor="#000"
-                android:textSize="24sp" />
+                android:textColor="@color/colorPrimary" />
 
             <TextView
+                android:id="@+id/employeDetail_name"
+                style="@style/listItemText"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_weight="3"
-                android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:text="Fissha Lijalem"
-                android:textColor="#000"
-                android:textSize="24sp" />
+                android:textColor="#000" />
         </LinearLayout>
 
         <LinearLayout
@@ -67,24 +68,25 @@
             android:layout_height="match_parent">
 
             <TextView
+                style="@style/listItemText"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_weight="2"
-                android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:text="Title:"
-                android:textColor="#000"
-                android:textSize="24sp" />
+                android:textColor="@color/colorPrimary" />
 
             <TextView
+                android:id="@+id/employeDetail_title"
+
+                style="@style/listItemText"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_weight="3"
                 android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:text="Android Developer"
-                android:textColor="#000"
-                android:textSize="24sp" />
+                android:textColor="#000" />
         </LinearLayout>
 
         <LinearLayout
@@ -92,24 +94,24 @@
             android:layout_height="match_parent">
 
             <TextView
+                style="@style/listItemText"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_weight="2"
-                android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:text="Age:"
-                android:textColor="#000"
-                android:textSize="24sp" />
+                android:textColor="@color/colorPrimary" />
 
             <TextView
+                android:id="@+id/employeDetail_age"
+
+                style="@style/listItemText"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_weight="3"
-                android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:text="29"
-                android:textColor="#000"
-                android:textSize="24sp" />
+                android:textColor="#000" />
         </LinearLayout>
 
         <LinearLayout
@@ -117,24 +119,24 @@
             android:layout_height="match_parent">
 
             <TextView
+                style="@style/listItemText"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_weight="2"
-                android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:text="Hire Date:"
-                android:textColor="#000"
-                android:textSize="24sp" />
+                android:textColor="@color/colorPrimary" />
 
             <TextView
+                android:id="@+id/employeDetail_hireDate"
+                style="@style/listItemText"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_weight="3"
-                android:gravity="center_vertical"
+
                 android:paddingLeft="16dp"
                 android:text="January 06/2020"
-                android:textColor="#000"
-                android:textSize="24sp" />
+                android:textColor="#000" />
         </LinearLayout>
 
         <LinearLayout
@@ -142,24 +144,25 @@
             android:layout_height="match_parent">
 
             <TextView
+                style="@style/listItemText"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_weight="2"
                 android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:text="Efficiency:"
-                android:textColor="#000"
-                android:textSize="24sp" />
+                android:textColor="@color/colorPrimary" />
 
             <TextView
+                android:id="@+id/employeDetail_efficiency"
+                style="@style/listItemText"
+
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_weight="3"
-                android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:text="99.76%"
-                android:textColor="#000"
-                android:textSize="24sp" />
+                android:textColor="#000" />
         </LinearLayout>
 
         <LinearLayout
@@ -170,19 +173,21 @@
             android:layout_marginBottom="20dp">
 
             <Button
+                android:id="@+id/employeDetail_evaluateBtn"
+                style="@style/button"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:background="#87F00F"
                 android:text="Evaluate" />
 
             <Button
+                android:id="@+id/employeDetail_fireBtn"
+                style="@style/button"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
-                android:background="#87F00F"
                 android:text="Fire" />
 
 

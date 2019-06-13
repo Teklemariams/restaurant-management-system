@@ -6,7 +6,7 @@ import java.util.Date;
 public class Waiter extends Employee {
     private ArrayList<Order> ordersHandled;
 
-    public Waiter(String name, int age, double employeeId, Date hireDate, double efficiency, ArrayList<Order> ordersHandled) {
+    public Waiter(String name, int age, int employeeId, String hireDate, double efficiency, ArrayList<Order> ordersHandled) {
         super(name, age, employeeId, hireDate, efficiency, "Waiter");
         this.ordersHandled = ordersHandled;
     }

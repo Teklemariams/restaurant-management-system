@@ -45,7 +45,6 @@ public class OrderDetailActivity extends AppCompatActivity {
         statusSpinner = findViewById(R.id.orderDetail_statusSpinner);
         ordersListView = findViewById(R.id.orderDetail_listView);
         okButton = findViewById(R.id.orderDetail_okBtn);
-        Toast.makeText(OrderDetailActivity.this, "Tapped table" + tappedTableNo, Toast.LENGTH_LONG).show();
 
         submittedOrders = new ArrayList<>();
         ordersInaTable = new ArrayList<>();

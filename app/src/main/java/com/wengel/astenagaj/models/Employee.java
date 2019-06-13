@@ -5,12 +5,12 @@ import java.util.Date;
 public class Employee {
     private String name;
     private int age;
-    private double employeeId;
-    private Date hireDate;
+    private int employeeId;
+    private String hireDate;
     private double efficiency;
     private String jobTitle;
 
-    public Employee(String name, int age, double employeeId, Date hireDate, double efficiency, String jobTitle) {
+    public Employee(String name, int age, int employeeId, String hireDate, double efficiency, String jobTitle) {
         this.name = name;
         this.age = age;
         this.employeeId = employeeId;
@@ -35,19 +35,19 @@ public class Employee {
         this.age = age;
     }
 
-    public double getEmployeeId() {
+    public int getEmployeeId() {
         return employeeId;
     }
 
-    public void setEmployeeId(double employeeId) {
+    public void setEmployeeId(int employeeId) {
         this.employeeId = employeeId;
     }
 
-    public Date getHireDate() {
+    public String getHireDate() {
         return hireDate;
     }
 
-    public void setHireDate(Date hireDate) {
+    public void setHireDate(String hireDate) {
         this.hireDate = hireDate;
     }
 
