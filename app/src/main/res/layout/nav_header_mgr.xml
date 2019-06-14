@@ -13,7 +13,7 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="120dp"
-        app:srcCompat="@drawable/restaurant_image"/>
+        app:srcCompat="@drawable/rest"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="12dp"
             android:paddingTop="5dp"
-            android:text=" Selam restaurant selcaft@gmail.com            www.selamrest.com"
+            android:text=" Selam restaurant  www.selamrest.com"
             android:textSize="17dp" />
     </LinearLayout>
 
