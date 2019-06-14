@@ -6,57 +6,66 @@
 
     <ImageView
         android:id="@+id/managed_orderimage_iv"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="05dp"
+        android:layout_marginTop="17dp"
+        android:background="@color/colorPrimary"
         android:scaleType="fitCenter"
         android:src="@drawable/ic_ordermgt" />
 
     <TextView
-        style="@style/contentText"
+        style="@style/listItemText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="7dp"
         android:layout_marginTop="20dp"
         android:text="Table no:" />
+
     <TextView
         android:id="@+id/managed_order_tableno_tv"
-        style="@style/contentText"
+        style="@style/listItemText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="07dp"
         android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
         android:text="01" />
+
     <TextView
-        style="@style/contentText"
+        style="@style/listItemText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="07dp"
         android:layout_marginTop="20dp"
         android:text="Waiter:" />
+
     <TextView
         android:id="@+id/managed_order_waiterno_tv"
-        style="@style/contentText"
+        style="@style/listItemText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="05dp"
         android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
         android:text=" " />
+
     <TextView
-        style="@style/contentText"
+        style="@style/listItemText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="07dp"
         android:layout_marginTop="20dp"
         android:text="Status:" />
+
     <TextView
         android:id="@+id/managed_order_status_tv"
         style="@style/contentText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="05dp"
         android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
         android:text="pending" />
 
 

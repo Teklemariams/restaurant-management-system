@@ -64,7 +64,7 @@ public class OrdersFragment extends Fragment {
         myOrders = new ArrayList<>();
         myOrders = app.getOrderController().getSubmittedOrders(); //since they refer to submitted orders
         // calculating total price
-        double totalPrice = app.getOrderController().getOrdersTotalPrice();
+        double totalPrice = app.getOrderController().getSubmittedOrdersTotalPrice();
         totalPriceTv.setText(String.valueOf(totalPrice + " Br"));
 
 

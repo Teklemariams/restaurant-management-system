@@ -26,7 +26,7 @@ public class BillActivity extends AppCompatActivity {
         totalBillTextV = findViewById(R.id.totalBilledAmount_tv);
         final App app = (App) getApplication();
 
-        double ordersTotalPrices = app.getOrderController().getOrdersTotalPrice();
+        double ordersTotalPrices = app.getOrderController().getSubmittedOrdersTotalPrice();
         totalBillTextV.setText(String.valueOf(ordersTotalPrices + "Br"));
 
         //data

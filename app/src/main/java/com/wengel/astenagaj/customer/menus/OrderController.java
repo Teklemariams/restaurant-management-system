@@ -18,7 +18,7 @@ public class OrderController {
     }
 
     //total price for submitted orders- more than 1 order by adding each sub total price of an order)
-    public double getOrdersTotalPrice() {
+    public double getSubmittedOrdersTotalPrice() { //but IT IS NOT NECESSARILY MEAN IT IS SOLD _IN SALES
         double totalPrice = 0;
         for (int i = 0; i < submittedOrders.size(); i++) {
             double orderPrice = submittedOrders.get(i).getTotalPrice();
