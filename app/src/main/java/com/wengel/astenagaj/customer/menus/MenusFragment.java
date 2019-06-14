@@ -48,11 +48,11 @@ public class MenusFragment extends Fragment {
         //data
         menus = new ArrayList<>();
 
-        localListPopulater();
+//        localListPopulater();
 
-//        Toast.makeText(getActivity(), "Loading menus ...", Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(), "Loading menus ...", Toast.LENGTH_LONG).show();
 
-//        getDataFromBackEnd();
+        getDataFromBackEnd();
 
         //view
         menusListView = menuRootView.findViewById(R.id.menus_list_view);

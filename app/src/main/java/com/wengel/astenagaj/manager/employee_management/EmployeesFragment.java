@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.wengel.astenagaj.R;
 import com.wengel.astenagaj.models.Employee;
@@ -24,7 +25,6 @@ public class EmployeesFragment extends Fragment {
     public EmployeesFragment() {
 
     }
-
     private ArrayList<Employee> employees;
     private ListView employeesListView;
     private Intent intent;
@@ -41,15 +41,22 @@ public class EmployeesFragment extends Fragment {
         employees = new ArrayList<>();
 
 
+//        if (employees.size() == 0) {
+//            localListPopulater();
+//        }
         employees = app.getEmployeeController().getEmployees();
-        if (employees.size() == 0) {
-            localListPopulater();
-        }
 
 
-//        Toast.makeText(getActivity(), "Loading employees ...", Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(), "Loading employees ...", Toast.LENGTH_SHORT).show();
 
 //        getDataFromBackEnd();
+        floatingActionButton = menuRootView.findViewById(R.id.fab);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), AddNewEmployeeActivity.class));
+            }
+        });
 
         //view
         employeesListView = menuRootView.findViewById(R.id.employees_listView);
@@ -70,14 +77,6 @@ public class EmployeesFragment extends Fragment {
                 bundle.putString(Constants.KEY_EMPLOYEE_JOB_TITLE, employee.getJobTitle());
                 intent.putExtras(bundle);
                 startActivity(intent);
-
-                floatingActionButton = menuRootView.findViewById(R.id.fab);
-                floatingActionButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        startActivity(new Intent(getContext(), AddNewEmployeeActivity.class));
-                    }
-                });
 
             }
         });
@@ -224,21 +223,21 @@ public class EmployeesFragment extends Fragment {
 //        });
 //    }
 
-    private void localListPopulater() {
-        employees.add(new Employee("Tigist", 23, 1, "02/02/2012", 98, "Waiter"));
-        employees.add(new Employee("Gemechu", 23, 01, "02/02/2012", 98, "Waiter"));
-        employees.add(new Employee("Abebe", 23, 01, "02/02/2012", 98, "Waiter"));
-        employees.add(new Employee("Haftom", 23, 01, "02/02/2012", 98, "Waiter"));
-        employees.add(new Employee("Betelhem", 23, 01, "02/02/2012", 98, "Waiter"));
-        employees.add(new Employee("Azeb", 23, 01, "02/02/2012", 98, "Waiter"));
-        employees.add(new Employee("Worke", 23, 01, "02/02/2012", 98, "Waiter"));
-        employees.add(new Employee("Tigist", 23, 01, "02/02/2012", 98, "Waiter"));
-        employees.add(new Employee("Tigist", 23, 01, "02/02/2012", 98, "Waiter"));
-        employees.add(new Employee("Tigist", 23, 01, "02/02/2012", 98, "Waiter"));
-        employees.add(new Employee("Tigist", 23, 01, "02/02/2012", 98, "Waiter"));
-
-        app = (App) getActivity().getApplication();
-        app.getEmployeeController().setEmployees(employees);
-
-    }
+//    private void localListPopulater() {
+//        employees.add(new Employee("Tigist", 23, 1, "02/02/2012", 98, "Waiter"));
+//        employees.add(new Employee("Gemechu", 23, 01, "02/02/2012", 98, "Waiter"));
+//        employees.add(new Employee("Abebe", 23, 01, "02/02/2012", 98, "Waiter"));
+//        employees.add(new Employee("Haftom", 23, 01, "02/02/2012", 98, "Waiter"));
+//        employees.add(new Employee("Betelhem", 23, 01, "02/02/2012", 98, "Waiter"));
+//        employees.add(new Employee("Azeb", 23, 01, "02/02/2012", 98, "Waiter"));
+//        employees.add(new Employee("Worke", 23, 01, "02/02/2012", 98, "Waiter"));
+//        employees.add(new Employee("Tigist", 23, 01, "02/02/2012", 98, "Waiter"));
+//        employees.add(new Employee("Tigist", 23, 01, "02/02/2012", 98, "Waiter"));
+//        employees.add(new Employee("Tigist", 23, 01, "02/02/2012", 98, "Waiter"));
+//        employees.add(new Employee("Tigist", 23, 01, "02/02/2012", 98, "Waiter"));
+//
+//        app = (App) getActivity().getApplication();
+//        app.getEmployeeController().setEmployees(employees);
+//
+//    }
 }
