@@ -23,11 +23,6 @@
             android:icon="@drawable/ic_salesreport"
             android:title="@string/title_sales" />
         <item
-            android:id="@+id/navigation_foodMgt"
-            style="@style/contentText"
-            android:icon="@drawable/ic_food_menu"
-            android:title="@string/title_menusMgt" />
-        <item
             android:id="@+id/aboout_us"
             style="@style/contentText"
             android:icon="@drawable/ic_aboutus"

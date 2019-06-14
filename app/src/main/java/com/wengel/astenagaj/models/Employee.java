@@ -2,6 +2,7 @@ package com.wengel.astenagaj.models;
 
 import java.util.Date;
 
+
 public class Employee {
     private String name;
     private int age;
@@ -9,6 +10,9 @@ public class Employee {
     private String hireDate;
     private double efficiency;
     private String jobTitle;
+
+    public Employee() {
+    }
 
     public Employee(String name, int age, int employeeId, String hireDate, double efficiency, String jobTitle) {
         this.name = name;

@@ -7,16 +7,24 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import com.wengel.astenagaj.R;
 
 public class SalesFragment extends Fragment {
-    public SalesFragment() {
+    private TextView totalTv;
+    private ListView saleseListView;
 
+
+    public SalesFragment() {
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_sales, container, false);
+        View salesRootView = inflater.inflate(R.layout.fragment_sales, container, false);
+        totalTv = salesRootView.findViewById(R.id.salesReport_TotalTv);
+        saleseListView = salesRootView.findViewById(R.id.salesReport_salesListView);
+        return salesRootView;
     }
 }

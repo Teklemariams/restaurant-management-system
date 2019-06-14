@@ -51,15 +51,9 @@ public class ManagerActivity extends AppCompatActivity {
                         getSupportFragmentManager()
                                 .beginTransaction()
                                 .replace(R.id.fragment_container,
-                                        new SalesFragment());
+                                        new SalesFragment()).commit();
                         break;
-                    case R.id.navigation_foodMgt:
-                        getSupportActionBar().setTitle("Menu management");
-                        getSupportFragmentManager()
-                                .beginTransaction()
-                                .replace(R.id.fragment_container,
-                                        new MenusMgtFragment()).commit();
-                        break;
+
 
                     // to be implemented later
 //                    case R.id.aboout_us:

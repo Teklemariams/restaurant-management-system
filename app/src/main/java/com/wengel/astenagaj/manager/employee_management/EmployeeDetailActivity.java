@@ -11,7 +11,11 @@ import android.widget.Toast;
 import com.wengel.astenagaj.R;
 import com.wengel.astenagaj.main_views.ManagerActivity;
 import com.wengel.astenagaj.manager.order_management.OrderDetailActivity;
+import com.wengel.astenagaj.models.Employee;
+import com.wengel.astenagaj.util.App;
 import com.wengel.astenagaj.util.Constants;
+
+import java.util.ArrayList;
 
 public class EmployeeDetailActivity extends AppCompatActivity {
     private Intent intent;
@@ -30,6 +34,7 @@ public class EmployeeDetailActivity extends AppCompatActivity {
     private TextView jobTitleTv;
     private Button evaluateBtn;
     private Button fireBtn;
+    App app;
 
 
     @Override
@@ -38,6 +43,8 @@ public class EmployeeDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_employee_detail);
         intent = getIntent();
         bundle = intent.getExtras();
+        app = (App) getApplication();
+
 
         nameTv = findViewById(R.id.employeDetail_name);
         ageTv = findViewById(R.id.employeDetail_age);
@@ -66,13 +73,22 @@ public class EmployeeDetailActivity extends AppCompatActivity {
         evaluateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Employee employeeToEvaluate = new Employee();
                 startActivity(new Intent(EmployeeDetailActivity.this, EmployeeEvaluationActivity.class));
             }
         });
         fireBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(EmployeeDetailActivity.this, "Employe fired succesfully", Toast.LENGTH_LONG).show();
+                Employee employeeToDelete = new Employee();
+                ArrayList<Employee> employees = app.getEmployeeController().getEmployees();
+                for (Employee emplyee : employees) {
+                    if (emplyee.getEmployeeId() == employeeId) {
+                        employeeToDelete = emplyee;
+                    }
+                }
+                app.getEmployeeController().deleteEmployee(employeeToDelete);
+                Toast.makeText(EmployeeDetailActivity.this, "Employee fired succesfully", Toast.LENGTH_LONG).show();
                 startActivity(new Intent(EmployeeDetailActivity.this, ManagerActivity.class));
             }
         });

@@ -18,11 +18,6 @@
             android:title="@string/title_customerOrders" />
 
         <item
-            android:id="@+id/navigation_comment"
-            style="@style/contentText"
-            android:icon="@drawable/ic_comment"
-            android:title="@string/title_customerComment" />
-        <item
             android:id="@+id/aboout_us"
             style="@style/contentText"
             android:icon="@drawable/ic_aboutus"

@@ -25,6 +25,11 @@ public class MenuItem {
         return quantitySold;
     }
 
+    public void incrementQuantitySold() {
+        ++quantitySold;
+    }
+
+
     public void setQuantitySold(int quantitySold) {
         this.quantitySold = quantitySold;
     }

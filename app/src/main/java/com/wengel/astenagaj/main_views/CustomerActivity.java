@@ -50,18 +50,10 @@ public class CustomerActivity extends AppCompatActivity {
                                 .replace(R.id.fragment_container,
                                         new OrdersFragment()).commit();
                         break;
-                    case R.id.navigation_comment:
-                        getSupportActionBar().setTitle("My comment");
-                        getSupportFragmentManager()
-                                .beginTransaction()
-                                .replace(R.id.fragment_container,
-                                        new CommentFragment()).commit();
-                        break;
 
                     // to be implemented later
 //                    case R.id.aboout_us:
 //                        startActivity(new Intent(ManagerActivity.this, AboutActivity.class));
-
                 }
                 customerDrawer.closeDrawer(GravityCompat.START);
                 return true;

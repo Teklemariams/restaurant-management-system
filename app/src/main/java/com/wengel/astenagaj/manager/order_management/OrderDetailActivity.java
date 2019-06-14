@@ -59,12 +59,19 @@ public class OrderDetailActivity extends AppCompatActivity {
         OrdersInaTableAdapter<Order> adapter = new OrdersInaTableAdapter<>(OrderDetailActivity.this, ordersInaTable);
         ordersInaTablelistView.setAdapter(adapter);
 
-
-
-
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String waiterHandling = (String) waiterSpinner.getSelectedItem();
+                String orderStatus = (String) statusSpinner.getSelectedItem();
+                for (Order order : ordersInaTable) {
+                    order.setWaiterHandling(waiterHandling);
+                    order.setStatus(orderStatus);
+                    if (orderStatus.equals("paid")) {
+                        order.getMenuItem().incrementQuantitySold();
+                    }
+                }
+                Toast.makeText(OrderDetailActivity.this, "Waiter and status set", Toast.LENGTH_LONG).show();
                 startActivity(new Intent(OrderDetailActivity.this, ManagerActivity.class));
             }
         });

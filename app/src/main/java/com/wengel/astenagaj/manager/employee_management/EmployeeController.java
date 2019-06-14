@@ -23,4 +23,9 @@ public class EmployeeController {
     public void addEmployee(Employee employee) {
         employees.add(employee);
     }
+
+    public void deleteEmployee(Employee employee) {
+        employees.remove(employee);
+    }
+
 }
