@@ -35,9 +35,6 @@ import okhttp3.Response;
 public class MenusFragment extends Fragment {
     ArrayList<MenuItem> menus;
     ListView menusListView;
-    private ProgressWheel progressWheel;
-    private TextView statusInfoLabel;
-//    private Bundle bundle = new Bundle();
 
     public MenusFragment() {
 

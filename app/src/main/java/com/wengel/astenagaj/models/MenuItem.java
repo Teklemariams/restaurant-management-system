@@ -34,6 +34,11 @@ public class MenuItem {
         this.quantitySold = quantitySold;
     }
 
+    public double getSales() {
+        double sales = this.price * this.quantitySold;
+        return sales;
+    }
+
     public String getName() {
         return name;
     }

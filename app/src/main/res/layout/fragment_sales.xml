@@ -47,8 +47,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:gravity="center"
-            android:text="Item"
+            android:text="         Item"
             android:textStyle="bold" />
 
         <TextView
@@ -65,7 +64,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1.8"
             android:gravity="center"
-            android:text="Quantity"
+            android:text="  Quantity"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -74,7 +73,8 @@
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:gravity="center"
-            android:text="Sub total(Br)"
+            android:textColor="@color/colorPrimary"
+            android:text=" Sub total(Br)"
             android:textSize="15sp"
             android:textStyle="bold" />
 
