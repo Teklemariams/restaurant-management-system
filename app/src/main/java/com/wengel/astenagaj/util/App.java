@@ -5,7 +5,7 @@ import android.app.Application;
 import com.wengel.astenagaj.customer.menus.MeuItemController;
 import com.wengel.astenagaj.customer.menus.OrderController;
 import com.wengel.astenagaj.manager.employee_management.EmployeeController;
-
+/**This is global Activity for saving data*/
 public class App extends Application {
     private MeuItemController meuItemController;
     private OrderController orderController;

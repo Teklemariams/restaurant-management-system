@@ -1,8 +1,10 @@
 package com.wengel.astenagaj.models;
 
 import java.util.ArrayList;
-import java.util.Date;
 
+/**
+ * Model for representing Employee
+ */
 public class Waiter extends Employee {
     private ArrayList<Order> ordersHandled;
 

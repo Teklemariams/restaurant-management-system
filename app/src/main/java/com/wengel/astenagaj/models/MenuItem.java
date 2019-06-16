@@ -1,5 +1,8 @@
 package com.wengel.astenagaj.models;
 
+/**
+ * Model for representing model
+ */
 public class MenuItem {
     private String name;
     int imageId;

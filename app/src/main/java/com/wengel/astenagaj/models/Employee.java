@@ -1,8 +1,5 @@
 package com.wengel.astenagaj.models;
-
-import java.util.Date;
-
-
+/**This is model for representing employee*/
 public class Employee {
     private String name;
     private int age;
