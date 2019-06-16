@@ -12,7 +12,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.wengel.astenagaj.R;
-import com.wengel.astenagaj.customer.CommentFragment;
 import com.wengel.astenagaj.customer.menus.MenusFragment;
 import com.wengel.astenagaj.customer.orders.OrdersFragment;
 
@@ -52,8 +51,8 @@ public class CustomerActivity extends AppCompatActivity {
                         break;
 
                     // to be implemented later
-//                    case R.id.aboout_us:
-//                        startActivity(new Intent(ManagerActivity.this, AboutActivity.class));
+                    case R.id.aboout_us:
+                        startActivity(new Intent(CustomerActivity.this, AboutRestaurantActivity.class));
                 }
                 customerDrawer.closeDrawer(GravityCompat.START);
                 return true;

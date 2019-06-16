@@ -1,5 +1,6 @@
 package com.wengel.astenagaj.main_views;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -56,8 +57,8 @@ public class ManagerActivity extends AppCompatActivity {
 
 
                     // to be implemented later
-//                    case R.id.aboout_us:
-//                        startActivity(new Intent(ManagerActivity.this, AboutActivity.class));
+                    case R.id.aboout_us:
+                        startActivity(new Intent(ManagerActivity.this, AboutManagerActivity.class));
 
                 }
                 mgrDrawer.closeDrawer(GravityCompat.START);
