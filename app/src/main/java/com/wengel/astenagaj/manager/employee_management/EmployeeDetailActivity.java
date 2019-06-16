@@ -35,15 +35,14 @@ public class EmployeeDetailActivity extends AppCompatActivity {
     private Button fireBtn;
     App app;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_detail);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         intent1 = getIntent(); //this intent brings data from employees frag
         bundle1 = intent1.getExtras();
         app = (App) getApplication();
-
 
         nameTv = findViewById(R.id.employeDetail_name);
         ageTv = findViewById(R.id.employeDetail_age);
@@ -60,7 +59,6 @@ public class EmployeeDetailActivity extends AppCompatActivity {
         hireDate = bundle1.getString(Constants.KEY_EMPLOYEE_HIREDATE);
         efficiency = bundle1.getDouble(Constants.KEY_EMPLOYEE_EFFICIENCY);
         jobTitle = bundle1.getString(Constants.KEY_EMPLOYEE_JOB_TITLE);
-
 
         nameTv.setText(name);
         ageTv.setText(String.valueOf(age));

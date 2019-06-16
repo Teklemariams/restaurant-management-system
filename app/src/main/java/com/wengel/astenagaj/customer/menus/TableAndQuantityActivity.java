@@ -21,6 +21,8 @@ public class TableAndQuantityActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table_and_quantity);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         continueButton = findViewById(R.id.tableno_continue_bn);
         mealQuantitySpinner = findViewById(R.id.customerMealQuantitySpinner);

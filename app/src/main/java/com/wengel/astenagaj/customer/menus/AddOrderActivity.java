@@ -35,6 +35,7 @@ public class AddOrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_order);
         app = (App) getApplication();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         addedOrderslistView = findViewById(R.id.added_orders_listView);
         addOrderButton = findViewById(R.id.addorder_add_bn);

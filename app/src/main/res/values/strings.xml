@@ -29,8 +29,13 @@
     </string>
     <string name="title_addneworder_acctivity">Adding order</string>
     <string name="title_activity_table_and_quantity">Adding Order</string>
-    <string name="title_activity_bill">Bill</string>
+    <string name="title_activity_bill">Your Bill</string>
     <string name="title_activity_order_detail">Order detail</string>
+    <string name="title_about_manager_activity">About Developer</string>
+    <string name="title_activitySalesReport">Daily sales report</string>
+    <string name="title_activityAddNewEmployee">Adding new employee</string>
+    <string name="title_activityEmployeeEvaluation">Evaluating employee</string>
+    <string name="title_activityEmployeeDetail">Employee detail</string>
     <string-array name="table_nos_dropdown_list">
         <item>01</item>
         <item>02</item>

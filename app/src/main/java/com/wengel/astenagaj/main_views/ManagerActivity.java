@@ -12,18 +12,109 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.wengel.astenagaj.R;
+import com.wengel.astenagaj.manager.AboutManagerActivity;
 import com.wengel.astenagaj.manager.employee_management.EmployeesFragment;
-import com.wengel.astenagaj.manager.MenusMgtFragment;
 import com.wengel.astenagaj.manager.order_management.OrdersMgtFragment;
 import com.wengel.astenagaj.manager.sales_report.SalesFragment;
+import com.wengel.astenagaj.util.Constants;
 
 public class ManagerActivity extends AppCompatActivity {
     private DrawerLayout mgrDrawer;
+    private Intent intent;
+    private Bundle bundle;
+    private String fragToReplace;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manager);
+        intent = getIntent();
+        bundle = intent.getExtras();
+        if (Constants.KEY_FRAG_TO_REPLACE != null && bundle != null) {
+
+            fragToReplace = bundle.getString(Constants.KEY_FRAG_TO_REPLACE);
+            switch (fragToReplace) {
+                case "employees":
+                    getSupportActionBar().setTitle("Employees");
+                    getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.fragment_container,
+                                    new EmployeesFragment()).commit();
+            }
+        }
+        Toolbar toolbar = findViewById(R.id.mgrToolbar);
+        setSupportActionBar(toolbar);
+        mgrDrawer = findViewById(R.id.manager_drawer_layout);
+        NavigationView navigationView = findViewById(R.id.mgrNav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.navigation_orders:
+                        getSupportActionBar().setTitle("Orders");
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.fragment_container,
+                                        new OrdersMgtFragment()).commit();
+                        break;
+                    case R.id.navigation_employees:
+                        getSupportActionBar().setTitle("Employees");
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.fragment_container,
+                                        new EmployeesFragment()).commit();
+                        break;
+                    case R.id.navigation_sales:
+                        getSupportActionBar().setTitle("Sales");
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.fragment_container,
+                                        new SalesFragment()).commit();
+                        break;
+
+
+                    // to be implemented later
+                    case R.id.aboout_us:
+                        startActivity(new Intent(ManagerActivity.this, AboutManagerActivity.class));
+
+                }
+                mgrDrawer.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        });
+
+        ActionBarDrawerToggle toggle =
+                new ActionBarDrawerToggle(this, mgrDrawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        mgrDrawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+//        getSupportFragmentManager()
+//                .beginTransaction()
+//                .replace(R.id.fragment_container,
+//                        new OrdersMgtFragment()).commit();
+//        navigationView.setCheckedItem(R.id.navigation_orders);
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setContentView(R.layout.activity_manager);
+        intent = getIntent();
+        bundle = intent.getExtras();
+        if (Constants.KEY_FRAG_TO_REPLACE != null && bundle != null) {
+
+            fragToReplace = bundle.getString(Constants.KEY_FRAG_TO_REPLACE);
+            switch (fragToReplace) {
+                case "employees":
+                    getSupportActionBar().setTitle("Employees");
+                    getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.fragment_container,
+                                    new EmployeesFragment()).commit();
+            }
+        }
+
 
         Toolbar toolbar = findViewById(R.id.mgrToolbar);
         setSupportActionBar(toolbar);
@@ -77,4 +168,5 @@ public class ManagerActivity extends AppCompatActivity {
         navigationView.setCheckedItem(R.id.navigation_orders);
 
     }
+
 }

@@ -23,6 +23,6 @@ public class Constants {
     public static final String KEY_EMPLOYEE_HIREDATE = "Employee hire date";
     public static final String KEY_EMPLOYEE_JOB_TITLE = "Employee Job title";
 
-
-
+//this is fragment to be opened in the next activity
+    public static final String KEY_FRAG_TO_REPLACE = "Fragment to be opened";
 }

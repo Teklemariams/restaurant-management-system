@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.wengel.astenagaj.R;
+import com.wengel.astenagaj.customer.AboutRestaurantActivity;
 import com.wengel.astenagaj.customer.menus.MenusFragment;
 import com.wengel.astenagaj.customer.orders.OrdersFragment;
 

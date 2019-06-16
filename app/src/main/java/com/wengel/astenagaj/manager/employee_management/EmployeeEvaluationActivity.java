@@ -31,6 +31,7 @@ public class EmployeeEvaluationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_evaluation);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         app = (App) getApplication();
         intent = getIntent();
         bundle = intent.getExtras();
@@ -50,9 +51,12 @@ public class EmployeeEvaluationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EmployeeEvaluationActivity.this, ManagerActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString(Constants.KEY_FRAG_TO_REPLACE, "employees");
                 efficiency = Double.parseDouble(String.valueOf(efficEt.getText()));
                 employeeToEvaluate.setEfficiency(efficiency);
                 Toast.makeText(EmployeeEvaluationActivity.this, "Evaluation Saved", Toast.LENGTH_SHORT).show();
+                getSupportActionBar().setTitle("Employees");
                 startActivity(intent);
             }
         });

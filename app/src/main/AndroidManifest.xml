@@ -38,26 +38,46 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".customer.menus.AddOrderActivity"
-            android:label="@string/title_addneworder_acctivity" />
+            android:label="@string/title_addneworder_acctivity"
+            android:parentActivityName=".customer.menus.TableAndQuantityActivity" />
         <activity
             android:name=".customer.orders.BillActivity"
-            android:label="@string/title_activity_bill" />
+            android:label="@string/title_activity_bill"
+            android:parentActivityName=".main_views.CustomerActivity" />
         <activity
             android:name=".manager.ManagerLoginActivity"
             android:label="@string/title_activity_manager_login" />
         <activity
             android:name=".manager.order_management.OrderDetailActivity"
-            android:label="@string/title_activity_order_detail" />
-        <activity android:name=".manager.order_management.PaymentStatusActivity" />
-        <activity android:name=".manager.employee_management.EmployeeDetailActivity" />
-        <activity android:name=".manager.employee_management.EmployeeEvaluationActivity" />
-        <activity android:name=".manager.employee_management.AddNewEmployeeActivity" />
-        <activity android:name=".manager.sales_report.SalesReportActivity" />
+            android:label="@string/title_activity_order_detail"
+            android:parentActivityName=".main_views.ManagerActivity" />
+        <activity android:name=".manager.employee_management.EmployeeDetailActivity"
+            android:label="@string/title_activityEmployeeDetail"
+            android:parentActivityName=".main_views.ManagerActivity"/>
+        <activity
+            android:name=".manager.employee_management.EmployeeEvaluationActivity"
+            android:label="@string/title_activityEmployeeEvaluation"
+            android:parentActivityName=".manager.employee_management.EmployeeDetailActivity" />
+        <activity
+            android:name=".manager.employee_management.AddNewEmployeeActivity"
+            android:label="@string/title_activityAddNewEmployee"
+            android:parentActivityName=".main_views.ManagerActivity" />
+        <activity
+            android:name=".manager.sales_report.SalesReportActivity"
+            android:label="@string/title_activitySalesReport"
+            android:parentActivityName=".main_views.ManagerActivity" />
         <activity
             android:name=".customer.menus.TableAndQuantityActivity"
-            android:label="@string/title_activity_table_and_quantity" />
-        <activity android:name=".main_views.AboutManagerActivity" />
-        <activity android:name=".main_views.AboutRestaurantActivity"></activity>
+            android:label="@string/title_activity_table_and_quantity"
+            android:parentActivityName=".main_views.CustomerActivity" />
+        <activity
+            android:name=".manager.AboutManagerActivity"
+            android:label="@string/title_about_manager_activity"
+            android:parentActivityName=".main_views.ManagerActivity" />
+        <activity
+            android:name=".customer.AboutRestaurantActivity"
+            android:label="About restaurant"
+            android:parentActivityName=".main_views.CustomerActivity"></activity>
     </application>
 
 </manifest>
