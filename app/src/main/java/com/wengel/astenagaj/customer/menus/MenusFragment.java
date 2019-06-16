@@ -186,6 +186,9 @@ public class MenusFragment extends Fragment {
                                 case "Ful":
                                     menuItemImage = R.drawable.ful;
                                     break;
+                                case "Anchote":
+                                    menuItemImage = R.drawable.anchotte;
+                                    break;
                             }
                             menus.add(new MenuItem(name, menuItemImage, price, quantitySold));
                         }

@@ -11,8 +11,7 @@ public class EmployeeController {
         employees = new ArrayList<>();
     }
 
-    public ArrayList<Employee> getEmployees()
-    {
+    public ArrayList<Employee> getEmployees() {
         return employees;
     }
 

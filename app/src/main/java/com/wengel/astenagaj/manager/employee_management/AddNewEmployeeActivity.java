@@ -54,7 +54,7 @@ public class AddNewEmployeeActivity extends AppCompatActivity {
                 employeeId = Integer.parseInt(employeIdEd.getText().toString());
 
                 Date date = new Date();
-                DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+                DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
                 String publicDate = dateFormat.format(date);
                 hireDate = String.valueOf(publicDate);
 
